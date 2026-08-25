@@ -9,6 +9,7 @@ import Testimonials from './components/Testimonials';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import BrandTicker from './components/BrandTicker';
+import PartnersSection from './components/PartnersSection';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <SelectedWorks />
       <Expertise />
       <Testimonials />
+      <PartnersSection />
       <FAQSection />
       <Footer />
     </main>
