@@ -97,13 +97,13 @@ export default function AboutSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ADF531] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ADF531]"></span>
               </span>
-              <span className="font-mono text-[11px] lg:text-[10.5px] xl:text-[12px] font-bold uppercase tracking-[2px] text-[#ADF531]">
+              <span className="font-mono text-[11px] lg:text-[10.5px] xl:text-[12px] font-bold uppercase tracking-[2px] text-[#ADF531]  ">
                 ABOUT NEXTGEN
               </span>
             </div>
 
             {/* Main Headline with Syne font & responsive scaling */}
-            <h2 className="font-syne font-black text-white leading-[1.1] xl:leading-[1.08] tracking-tight mb-4 lg:mb-3 xl:mb-6 text-[1.8rem] sm:text-[2.2rem] lg:text-[1.55rem] xl:text-[2.8rem] 2xl:text-[3.6rem] max-w-[600px]">
+            <h2 className="font-semibold leading-[0.82] tracking-[-0.075em] font-syne text-white xl:leading-[1.08]  mb-4 lg:mb-3 xl:mb-6 text-[1.8rem] sm:text-[1.2rem] lg:text-[2.55rem] xl:text-[3.8rem] 2xl:text-[4.6rem] max-w-[600px]">
               Your Home for the Digital Community
             </h2>
 

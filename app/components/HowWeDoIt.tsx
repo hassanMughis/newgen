@@ -420,7 +420,7 @@ export default function HowWeDoIt() {
               className="
                 mt-8
                 font-[family-name:var(--font-syne)]
-                font-black
+                font-semibold
                 text-5xl
                 sm:text-6xl
                 lg:text-[70px]
@@ -431,7 +431,6 @@ export default function HowWeDoIt() {
             >
 
               How we
-              <br/>
               do it
 
 

@@ -39,12 +39,12 @@ export default function CTASection() {
         </div>
 
         {/* Main Headline */}
-        <h2 className="font-syne font-black text-white leading-[1.12] tracking-tight mb-6 text-[1.8rem] sm:text-[2.4rem] md:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] max-w-none">
+        <h2 className=" text-white xl:leading-[1.08]  mb-4 lg:mb-3 xl:mb-6  font-semibold leading-[0.82] tracking-[-0.075em] font-syne  text-[2.3rem] sm:text-[3.2rem] lg:text-[4.55rem] xl:text-[5.8rem] 2xl:text-[6.6rem] max-w-[1200px]">
           Where Strategy <span className="text-[#ADF531]">Meets Scalable Growth.</span>
         </h2>
 
         {/* Subtitle Description */}
-        <p className="font-sans text-[#b8b8b8] text-[1.05rem] sm:text-[1.18rem] md:text-[1.28rem] leading-[1.7] max-w-4xl lg:max-w-5xl mb-11">
+        <p className="font-sans text-[#b8b8b8] text-[0.85rem] sm:text-[1.08rem] md:text-[1.18rem] leading-[1.5] max-w-4xl lg:max-w-5xl mb-11">
           NextGen Digital brings ideas and execution together — empowering ambitious brands and creators to discover custom strategies, scale faster, and build high-impact digital experiences.
         </p>
 

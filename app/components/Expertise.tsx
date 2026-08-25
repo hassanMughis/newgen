@@ -269,7 +269,7 @@ export default function Expertise() {
       <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10">
 
         {/* ── SECTION TITLE ── */}
-        <h2 className="font-syne font-black text-white text-[2.05rem] sm:text-[3.8rem] md:text-[4.8rem] lg:text-[5.5rem] tracking-tight leading-none uppercase mb-8 sm:mb-10 lg:mb-6">
+        <h2 className="font-syne font-semibold text-white text-[2.25rem] sm:text-[3.8rem] md:text-[5.8rem] lg:text-[6.5rem] tracking-tight leading-none uppercase mb-8 sm:mb-10 lg:mb-6">
           Expertise
         </h2>
 

@@ -233,20 +233,18 @@ export default function FAQSection() {
 
             <h2 className="
               font-[family-name:var(--font-syne)] 
-              font-black 
+              font-semibold
               text-white 
-              text-[1.65rem] 
+              text-[1.95rem] 
               sm:text-[2.4rem] 
-              md:text-[3.2rem] 
-              lg:text-[3.8rem] 
-              xl:text-[4.4rem] 
+              md:text-[3.8rem] 
+              lg:text-[4.5rem] 
+              xl:text-[5.4rem] 
               tracking-tight 
               leading-[0.9]
             ">
               Frequently
-              <br/>
               Asked
-              <br/>
               Questions
             </h2>
 

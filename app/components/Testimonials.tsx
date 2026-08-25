@@ -150,7 +150,7 @@ export default function Testimonials({
       {/* Section Header */}
       {!hideHeader && (
         <div data-reveal="up" className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10 text-center mb-14 sm:mb-16">
-          <h2 className="font-syne font-black text-white text-[2.4rem] sm:text-[3.4rem] md:text-[4.2rem] lg:text-[5rem] tracking-tight leading-none mb-4">
+          <h2 className="font-syne font-semibold text-white text-[2.4rem] sm:text-[3.8rem] md:text-[5.2rem] lg:text-[6rem] tracking-tight leading-none mb-4">
             Built With Care. <span className="text-[#ADF531]">Trusted By</span> Brands.
           </h2>
           <p className="font-sans text-[#a0a0a0] text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-normal">
