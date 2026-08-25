@@ -74,7 +74,7 @@ export default function FAQSection() {
 
 
         {/* TOP IMAGES */}
-        <div className="
+        <div data-reveal="zoom" data-reveal-stagger className="
           grid 
           grid-cols-1 
           md:grid-cols-2 
@@ -177,7 +177,7 @@ export default function FAQSection() {
 
           {/* LEFT CONTENT */}
 
-          <div className="lg:sticky lg:top-20">
+          <div data-reveal="left" className="lg:sticky lg:top-20">
 
 
             <div className="
@@ -272,7 +272,7 @@ export default function FAQSection() {
 
           {/* RIGHT ACCORDION */}
 
-          <div className="space-y-3 sm:space-y-3.5">
+          <div data-reveal="right" className="space-y-3 sm:space-y-3.5">
 
           {faqs.map((faq,index)=>{
 

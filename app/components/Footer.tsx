@@ -1,12 +1,12 @@
-import Container from './Container';
+import Link from 'next/link';
 
 export default function Footer() {
 
   const navLinks = [
-    'Features',
-    'Services',
-    'Pricing',
-    'How To Use'
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Work', href: '/work' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' }
   ];
 
 
@@ -102,6 +102,8 @@ export default function Footer() {
         {/* CONTENT */}
 
         <div
+          data-reveal="zoom"
+          data-reveal-stagger
           className="
             relative
             z-10
@@ -123,9 +125,9 @@ export default function Footer() {
               tracking-tight
             "
           >
-            Be part of the future
+            Build what&apos;s next
             <br />
-            of IdentityHub
+            with NextGen
           </h2>
 
 
@@ -153,14 +155,14 @@ export default function Footer() {
               leading-relaxed
             "
           >
-            Join thousands of users who are already transforming
-            their digital identity experience.
+            Bring us the ambitious idea. We&apos;ll turn it into a sharp,
+            scalable digital experience built to move your brand forward.
           </p>
 
 
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="
               mt-8
               inline-flex
@@ -198,7 +200,7 @@ export default function Footer() {
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
 
-          </a>
+          </Link>
 
 
         </div>
@@ -261,9 +263,9 @@ export default function Footer() {
             >
 
               {navLinks.map((link)=>(
-                <a
-                  key={link}
-                  href="#"
+                <Link
+                  key={link.name}
+                  href={link.href}
                   className="
                     px-6
                     py-8
@@ -275,8 +277,8 @@ export default function Footer() {
                     hover:text-[#ADF531]
                   "
                 >
-                  {link}
-                </a>
+                  {link.name}
+                </Link>
               ))}
 
             </nav>

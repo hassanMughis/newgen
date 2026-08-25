@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import PortalPreloader from "./components/PortalPreloader";
+import ScrollRevealController from "./components/ScrollRevealController";
+import SmoothScroll from "./components/SmoothScroll";
 import { Syne } from "next/font/google";
 
 const syne = Syne({
@@ -21,6 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${syne.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black" suppressHydrationWarning>
+        <PortalPreloader />
+        <SmoothScroll />
+        <ScrollRevealController />
         <Navbar />
         {children}
       </body>

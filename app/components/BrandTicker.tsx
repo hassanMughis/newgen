@@ -39,6 +39,7 @@ export default function BrandTicker() {
 
   return (
     <section
+      data-reveal="clip"
       className="
         w-full
         overflow-hidden

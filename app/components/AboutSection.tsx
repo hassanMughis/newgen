@@ -15,7 +15,11 @@ export default function AboutSection() {
         overflow-x-clip
       "
     >
-      <div className="mx-auto w-full max-w-[1880px] px-4 sm:px-6 lg:px-6 xl:px-10">
+      <div
+        data-reveal="left"
+        data-reveal-stagger
+        className="mx-auto w-full max-w-[1880px] px-4 sm:px-6 lg:px-6 xl:px-10"
+      >
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.15fr_1.15fr] lg:items-stretch lg:gap-4 xl:gap-8">
 
           {/* ── COL 1 (LEFT): Green feature card + Avatars below ── */}

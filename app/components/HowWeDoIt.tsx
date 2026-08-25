@@ -87,10 +87,17 @@ export default function HowWeDoIt() {
             track.parentElement?.offsetWidth ??
             track.offsetWidth
 
+          const containerLeft =
+            track.parentElement?.getBoundingClientRect().left ?? 0
 
+          const visibleWidth =
+            window.innerWidth - containerLeft - 24
 
           const availableWidth =
-            containerWidth * 0.95
+            Math.max(
+              cardWidth,
+              Math.min(containerWidth, visibleWidth) * 0.98
+            )
 
 
 
@@ -98,7 +105,7 @@ export default function HowWeDoIt() {
             cards.length > 1
             ?
             Math.max(
-              20,
+              6,
               Math.min(
                 100,
                 (availableWidth-cardWidth) /
@@ -116,29 +123,19 @@ export default function HowWeDoIt() {
 
 
 
-          const spacing =
-            cards.length > 1
-            ?
-            baseX[1]-baseX[0]
-            :
-            cardWidth
+          maxX = Math.max(
+            0,
+            ...baseX.map((position, index) => (
+              position - (leftStackX + index * overlapSpacing)
+            ))
+          )
 
 
 
-
-          maxX =
-            Math.max(
-              0,
-              spacing * (cards.length-1)
-            )
-
-
-
-          scrollDistance =
-            Math.max(
-              1300,
-              maxX + cardWidth + 300
-            )
+          scrollDistance = Math.max(
+            window.innerHeight * 0.8,
+            maxX + 80
+          )
 
         }
 
@@ -280,6 +277,8 @@ export default function HowWeDoIt() {
         return ()=>{
 
           trigger.kill()
+          gsap.set(track,{ clearProps:'transform' })
+          gsap.set(track.children,{ clearProps:'transform,zIndex' })
 
         }
 
@@ -294,6 +293,10 @@ export default function HowWeDoIt() {
 
         gsap.set(track,{
           clearProps:'all'
+        })
+
+        gsap.set(track.children,{
+          clearProps:'transform,zIndex'
         })
 
 
@@ -317,15 +320,21 @@ export default function HowWeDoIt() {
     return (
 
     <section
+      id="process"
       ref={containerRef}
       className="
         relative
-        h-[85vh]
+        h-auto
+        min-h-0
+        lg:h-[85vh]
         bg-black
         text-white
         flex
         items-center
         overflow-hidden
+        py-20
+        sm:py-24
+        lg:py-0
       "
     >
 
@@ -349,8 +358,11 @@ export default function HowWeDoIt() {
         <div
           className="
             grid
-            lg:grid-cols-[420px_1fr]
+            lg:grid-cols-[360px_minmax(0,1fr)]
+            xl:grid-cols-[420px_minmax(0,1fr)]
             gap-12
+            lg:gap-8
+            xl:gap-12
             items-center
             w-full
           "
@@ -362,7 +374,7 @@ export default function HowWeDoIt() {
           {/* LEFT CONTENT */}
 
 
-          <div>
+          <div data-reveal="left">
 
 
 
@@ -409,8 +421,10 @@ export default function HowWeDoIt() {
                 mt-8
                 font-[family-name:var(--font-syne)]
                 font-black
-                text-6xl
-                lg:text-[90px]
+                text-5xl
+                sm:text-6xl
+                lg:text-[70px]
+                xl:text-[90px]
                 leading-[0.95]
                 tracking-tight
               "
@@ -462,7 +476,10 @@ export default function HowWeDoIt() {
               overflow-visible
               flex
               items-center
-              h-[390px]
+              min-w-0
+              w-full
+              h-auto
+              lg:h-[390px]
             "
           >
 
@@ -471,9 +488,14 @@ export default function HowWeDoIt() {
             <div
               ref={trackRef}
               className="
-                flex
-                gap-8
-                w-max
+                grid
+                grid-cols-1
+                gap-4
+                w-full
+                sm:gap-5
+                lg:flex
+                lg:gap-8
+                lg:w-max
               "
             >
               {steps.map((item)=>(
@@ -486,15 +508,24 @@ export default function HowWeDoIt() {
                     flex
                     flex-col
                     justify-between
-                    w-[420px]
-                    h-[430px]
-                    rounded-[28px]
+                    w-full
+                    min-h-[260px]
+                    h-auto
+                    rounded-[22px]
                     bg-[#080808]
                     border
                     border-white/10
-                    p-10
+                    p-6
                     overflow-hidden
                     shrink-0
+                    sm:min-h-[280px]
+                    sm:p-8
+                    lg:w-[380px]
+                    xl:w-[420px]
+                    lg:h-[430px]
+                    lg:min-h-0
+                    lg:rounded-[28px]
+                    lg:p-10
                   "
                 >
 
@@ -511,7 +542,8 @@ export default function HowWeDoIt() {
                       top-0
                       font-[family-name:var(--font-syne)]
                       font-black
-                      text-[180px]
+                      text-[110px]
+                      lg:text-[180px]
                       leading-none
                       text-white/[0.04]
                     "
@@ -555,10 +587,12 @@ export default function HowWeDoIt() {
 
                     <h3
                       className="
-                        mt-8
+                        mt-6
+                        lg:mt-8
                         font-[family-name:var(--font-syne)]
                         font-black
-                        text-4xl
+                        text-3xl
+                        lg:text-4xl
                       "
                     >
 
@@ -581,7 +615,8 @@ export default function HowWeDoIt() {
                     className="
                       relative
                       z-10
-                      text-lg
+                      text-base
+                      lg:text-lg
                       leading-relaxed
                       text-white/50
                     "

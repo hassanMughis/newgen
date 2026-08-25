@@ -21,7 +21,11 @@ export default function CTASection() {
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       {/* Section Content */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto text-center flex flex-col items-center">
+      <div
+        data-reveal="zoom"
+        data-reveal-stagger
+        className="relative z-10 w-full max-w-[1440px] mx-auto text-center flex flex-col items-center"
+      >
         
         {/* Category Pill with Live Pulse */}
         <div className="mb-6 sm:mb-8 inline-flex items-center gap-2.5 rounded-full bg-[#ADF531]/10 border border-[#ADF531]/30 backdrop-blur-md px-5 py-2">
@@ -69,7 +73,7 @@ export default function CTASection() {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto">
           <a
-            href="#contact"
+            href="/contact"
             className="
               w-full sm:w-auto
               inline-flex items-center justify-center gap-3

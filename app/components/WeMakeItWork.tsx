@@ -4,6 +4,7 @@ import {
   motion,
   AnimatePresence,
   useScroll,
+  useSpring,
   useTransform
 } from "framer-motion";
 
@@ -83,12 +84,22 @@ export default function WeMakeItWork() {
     offset: ["start start", "end end"]
   });
 
+  // Smooth out abrupt wheel and trackpad input before it reaches the video.
+  // A softer spring lets the card expand steadily even when scroll progress
+  // changes by a large amount in a single frame.
+  const smoothScrollProgress = useSpring(scrollYProgress, {
+    stiffness: 45,
+    damping: 18,
+    mass: 0.9,
+    restDelta: 0.0005
+  });
+
   /* =========================
      VIDEO WIDTH
   ========================== */
 
   const width = useTransform(
-    scrollYProgress,
+    smoothScrollProgress,
     [0, 0.78],
     ["38vw", "100vw"]
   );
@@ -108,7 +119,7 @@ export default function WeMakeItWork() {
       : 700;
 
   const height = useTransform(
-    scrollYProgress,
+    smoothScrollProgress,
     [0, 0.78],
     [smallHeight, fullHeight]
   );
@@ -118,7 +129,7 @@ export default function WeMakeItWork() {
   ========================== */
 
   const videoY = useTransform(
-    scrollYProgress,
+    smoothScrollProgress,
     [0, 0.78],
     [0, NAV_HEIGHT / 2]
   );
@@ -128,19 +139,19 @@ export default function WeMakeItWork() {
   ========================== */
 
   const rotateZ = useTransform(
-    scrollYProgress,
+    smoothScrollProgress,
     [0, 0.7],
     [11, 0]
   );
 
   const rotateX = useTransform(
-    scrollYProgress,
+    smoothScrollProgress,
     [0, 0.7],
     [8, 0]
   );
 
   const rotateY = useTransform(
-    scrollYProgress,
+    smoothScrollProgress,
     [0, 0.7],
     [-18, 0]
   );

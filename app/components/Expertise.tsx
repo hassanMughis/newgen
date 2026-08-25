@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion';
 
 interface CardData {
   number: string;
@@ -29,28 +29,27 @@ interface CardData {
 function StackingCard({
   card,
   index,
-  totalCards,
   progress,
   range,
   targetScale,
 }: {
   card: CardData;
   index: number;
-  totalCards: number;
-  progress: any;
+  progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
 }) {
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div className="h-screen flex items-center justify-center sticky top-0">
+    <div className="relative h-auto mb-5 sm:mb-6 lg:h-screen lg:mb-0 lg:sticky lg:top-0 flex items-center justify-center">
       <motion.div
         style={{
           scale,
           top: `calc(0% + ${index * 22}px)`,
         }}
         className={`
+          expertise-card
           relative
           w-full
           min-h-[500px] sm:min-h-[540px] lg:h-[580px] xl:h-[620px]
@@ -265,12 +264,12 @@ export default function Expertise() {
     <section
       id="expertise"
       ref={containerRef}
-      className="relative bg-black text-white pt-20 pb-32 overflow-visible"
+      className="relative bg-black text-white pt-20 pb-12 sm:pb-20 lg:pb-32 overflow-visible"
     >
       <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10">
 
         {/* ── SECTION TITLE ── */}
-        <h2 className="font-syne font-black text-white text-[2.6rem] sm:text-[3.8rem] md:text-[4.8rem] lg:text-[5.5rem] tracking-tight leading-none uppercase mb-4 sm:mb-6">
+        <h2 className="font-syne font-black text-white text-[2.05rem] sm:text-[3.8rem] md:text-[4.8rem] lg:text-[5.5rem] tracking-tight leading-none uppercase mb-8 sm:mb-10 lg:mb-6">
           Expertise
         </h2>
 
@@ -283,7 +282,6 @@ export default function Expertise() {
                 key={card.number}
                 card={card}
                 index={index}
-                totalCards={cards.length}
                 progress={scrollYProgress}
                 range={[index * 0.25, 1]}
                 targetScale={targetScale}

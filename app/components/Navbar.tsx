@@ -1,8 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+  const pathname = usePathname();
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,10 +32,10 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: 'Work', href: '#work' },
-    { name: 'Services', href: '#services' },
-    { name: 'Process', href: '#process' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Work', href: '/work' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   const handleNavClick = () => {
@@ -110,7 +113,7 @@ export default function Navbar() {
         >
 
           {/* Logo */}
-          <a href="#" className="flex items-center h-full">
+          <Link href="/" className="flex items-center h-full">
             <img
               src="/ngt-logo-cropped.png"
               alt="NGD Logo"
@@ -128,16 +131,16 @@ export default function Navbar() {
                 duration-700
               "
             />
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-9 xl:gap-11">
             {
               navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
-                  className="
+                  className={`
                     relative
                     text-[#999]
                     text-[11px]
@@ -162,10 +165,12 @@ export default function Navbar() {
                     after:duration-500
                     after:ease-out
                     hover:after:w-full
-                  "
+                  
+                  ${pathname === item.href ? 'text-[#BDFE00] after:w-full' : ''}
+                  `}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))
             }
           </nav>
@@ -257,7 +262,7 @@ export default function Navbar() {
           `}
         >
           {navItems.map((item, i) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               onClick={handleNavClick}
@@ -277,7 +282,7 @@ export default function Navbar() {
               `}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

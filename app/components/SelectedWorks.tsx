@@ -6,10 +6,7 @@ export default function SelectedWorks() {
       <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10">
 
         {/* ── SECTION HEADER ── */}
-        <div className="flex items-end justify-between pb-4">
-          <h2 className="font-syne font-black text-white text-[2.2rem] sm:text-[3.4rem] md:text-[4.2rem] lg:text-[4.8rem] tracking-tight leading-none uppercase">
-            Selected Works
-          </h2>
+        <div data-reveal="left" className="flex items-end justify-end pb-4">
           <a
             href="#work"
             className="font-mono text-[11px] sm:text-[12px] font-bold text-[#ADF531] tracking-[2px] uppercase hover:text-[#c4ff3e] hover:underline pb-1 transition-all"
@@ -18,28 +15,24 @@ export default function SelectedWorks() {
           </a>
         </div>
         
-        {/* Subtle Horizontal Divider */}
-        <div className="w-full h-px bg-white/15 mb-10 sm:mb-16" />
-
-
         {/* ── TOP SHOWCASE: Vertical "work" label + 3 Phone Cards ── */}
-        <div className="flex flex-col md:flex-row items-center md:items-stretch gap-6 lg:gap-10 mb-14 sm:mb-20">
+        <div
+          data-reveal="right"
+          data-reveal-stagger
+          className="flex flex-col md:flex-row items-center md:items-stretch md:justify-center gap-5 sm:gap-6 md:gap-6 lg:gap-8 mb-14 sm:mb-20"
+        >
           
           {/* Vertical "work" typography */}
-          <div className="hidden md:flex items-center justify-center pr-2 lg:pr-6 select-none">
+          <div className="flex w-full items-center justify-start select-none md:w-auto md:justify-center">
             <span
-              className="font-syne font-black text-white text-[4.5rem] lg:text-[5.5rem] xl:text-[6.5rem] uppercase tracking-tighter"
-              style={{
-                writingMode: 'vertical-rl',
-                transform: 'rotate(180deg)',
-              }}
+              className="nextfolio-label font-syne font-semibold text-white/80 text-[2.75rem] sm:text-[3.25rem] md:text-[clamp(3.5rem,6.5vw,6.5rem)] leading-[0.78] uppercase tracking-[-0.04em]"
             >
-              work
+              nextfolio
             </span>
           </div>
 
           {/* 3 Showcase Phone Cards with strict 9:16 aspect ratio */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 flex-1 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 w-full max-w-[1380px]">
             
             {/* Card 1: Royal Blue Brand Card */}
             <div className="group relative aspect-[9/16] w-full rounded-[32px] sm:rounded-[38px] bg-[#08119E] border border-blue-600/30 overflow-hidden flex flex-col items-center justify-center p-6 shadow-[0_20px_50px_rgba(8,17,158,0.35)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(8,17,158,0.5)]">
@@ -112,7 +105,11 @@ export default function SelectedWorks() {
 
 
         {/* ── BOTTOM SHOWCASE: 2-Column Grid (PCKD + MEAT DUKAN / FUNCHI) ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.3fr] gap-8 sm:gap-10 lg:gap-8 xl:gap-10 items-stretch">
+        <div
+          data-reveal="up"
+          data-reveal-stagger
+          className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.3fr] gap-8 sm:gap-10 lg:gap-8 xl:gap-10 items-stretch"
+        >
           
           {/* Left: PCKD Tall Feature Card (Height matches right column exactly) */}
           <div className="flex flex-col h-full group">

@@ -85,19 +85,20 @@ const reviewsRow2: Review[] = [
   },
 ];
 
-function ReviewCard({ review }: { review: Review }) {
+function ReviewCard({ review, dark = false }: { review: Review; dark?: boolean }) {
   return (
     <div
-      className="
+      className={`
         w-[340px] sm:w-[380px] md:w-[420px]
         shrink-0
-        bg-[#ADF531]
         rounded-[20px] sm:rounded-[24px]
         p-6 sm:p-7
         flex flex-col gap-4
-        shadow-[0_8px_32px_rgba(173,245,49,0.18)]
-        border border-[#c8ff3e]/30
-      "
+        border
+        ${dark
+          ? 'bg-[#090909] border-white/10 shadow-[0_12px_35px_rgba(0,0,0,0.72)]'
+          : 'bg-[#ADF531] border-[#c8ff3e]/30 shadow-[0_8px_32px_rgba(173,245,49,0.18)]'}
+      `}
     >
       {/* Top Row: Avatar + Name/Role + Quote Icon */}
       <div className="flex items-center justify-between gap-3">
@@ -105,13 +106,13 @@ function ReviewCard({ review }: { review: Review }) {
           <img
             src={review.avatar}
             alt={review.name}
-            className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-black/15 flex-shrink-0"
+            className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 flex-shrink-0 ${dark ? 'border-white/15' : 'border-black/15'}`}
           />
           <div>
-            <p className="font-sans font-bold text-black text-[15px] sm:text-[17px] leading-tight">
+            <p className={`font-sans font-bold text-[15px] sm:text-[17px] leading-tight ${dark ? 'text-white' : 'text-black'}`}>
               {review.name}
             </p>
-            <p className="font-sans text-black/70 text-[12px] sm:text-[13px] leading-tight mt-0.5">
+            <p className={`font-sans text-[12px] sm:text-[13px] leading-tight mt-0.5 ${dark ? 'text-white/45' : 'text-black/70'}`}>
               {review.role}
             </p>
           </div>
@@ -122,33 +123,41 @@ function ReviewCard({ review }: { review: Review }) {
           src="/quote-icon.svg"
           alt="quote"
           className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 opacity-80"
-          style={{ filter: 'brightness(0)' }}
+          style={{ filter: dark ? 'brightness(0) invert(1)' : 'brightness(0)' }}
         />
       </div>
 
       {/* Testimonial Text */}
-      <p className="font-sans text-black/90 text-[13.5px] sm:text-[14.5px] leading-[1.65] font-normal">
+      <p className={`font-sans text-[13.5px] sm:text-[14.5px] leading-[1.65] font-normal ${dark ? 'text-white/65' : 'text-black/90'}`}>
         {review.testimonial}
       </p>
     </div>
   );
 }
 
-export default function Testimonials() {
+export default function Testimonials({
+  hideHeader = false,
+  darkCards = false,
+}: {
+  hideHeader?: boolean;
+  darkCards?: boolean;
+}) {
   return (
-    <section className="relative bg-black text-white py-24 sm:py-32 overflow-hidden">
+    <section className={`relative overflow-hidden bg-black text-white ${hideHeader ? 'pb-12 pt-8 sm:pb-16 sm:pt-10' : 'py-24 sm:py-32'}`}>
       {/* Background radial glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(173,245,49,0.06),_transparent_70%)] pointer-events-none" />
+      <div className={`absolute inset-0 pointer-events-none ${darkCards ? 'bg-black' : 'bg-[radial-gradient(ellipse_at_top,_rgba(173,245,49,0.06),_transparent_70%)]'}`} />
 
       {/* Section Header */}
-      <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10 text-center mb-14 sm:mb-16">
-        <h2 className="font-syne font-black text-white text-[2.4rem] sm:text-[3.4rem] md:text-[4.2rem] lg:text-[5rem] tracking-tight leading-none mb-4">
-          Built With Care. <span className="text-[#ADF531]">Trusted By</span> Brands.
-        </h2>
-        <p className="font-sans text-[#a0a0a0] text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-normal">
-          Our clients share their real experiences partnering with NextGen Digital — driving measurable ROI, avant-garde design, and high-impact digital growth.
-        </p>
-      </div>
+      {!hideHeader && (
+        <div data-reveal="up" className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10 text-center mb-14 sm:mb-16">
+          <h2 className="font-syne font-black text-white text-[2.4rem] sm:text-[3.4rem] md:text-[4.2rem] lg:text-[5rem] tracking-tight leading-none mb-4">
+            Built With Care. <span className="text-[#ADF531]">Trusted By</span> Brands.
+          </h2>
+          <p className="font-sans text-[#a0a0a0] text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-normal">
+            Our clients share their real experiences partnering with NextGen Digital — driving measurable ROI, avant-garde design, and high-impact digital growth.
+          </p>
+        </div>
+      )}
 
       {/* Marquee Row 1 — Left */}
       <div className="relative overflow-hidden w-full mb-5 sm:mb-6">
@@ -158,12 +167,12 @@ export default function Testimonials() {
         <div className="flex w-max animate-marquee-left gap-4 sm:gap-5">
           <div className="flex gap-4 sm:gap-5 shrink-0">
             {reviewsRow1.map((rev, i) => (
-              <ReviewCard key={`r1-a-${i}`} review={rev} />
+              <ReviewCard key={`r1-a-${i}`} review={rev} dark={darkCards} />
             ))}
           </div>
           <div className="flex gap-4 sm:gap-5 shrink-0">
             {reviewsRow1.map((rev, i) => (
-              <ReviewCard key={`r1-b-${i}`} review={rev} />
+              <ReviewCard key={`r1-b-${i}`} review={rev} dark={darkCards} />
             ))}
           </div>
         </div>
@@ -177,12 +186,12 @@ export default function Testimonials() {
         <div className="flex w-max animate-marquee-right gap-4 sm:gap-5">
           <div className="flex gap-4 sm:gap-5 shrink-0">
             {reviewsRow2.map((rev, i) => (
-              <ReviewCard key={`r2-a-${i}`} review={rev} />
+              <ReviewCard key={`r2-a-${i}`} review={rev} dark={darkCards} />
             ))}
           </div>
           <div className="flex gap-4 sm:gap-5 shrink-0">
             {reviewsRow2.map((rev, i) => (
-              <ReviewCard key={`r2-b-${i}`} review={rev} />
+              <ReviewCard key={`r2-b-${i}`} review={rev} dark={darkCards} />
             ))}
           </div>
         </div>

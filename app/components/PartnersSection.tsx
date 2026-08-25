@@ -61,8 +61,9 @@ export default function PartnersSection() {
           className="
             absolute
             flex
+            w-max
             items-center
-            gap-12
+            animate-marquee
             whitespace-nowrap
             text-[#3A3A3A]
             font-[family-name:var(--font-syne)]
@@ -74,25 +75,18 @@ export default function PartnersSection() {
           "
         >
 
-          <span>
-            ✦
-          </span>
-
-          <span>
-            Our Partners
-          </span>
-
-          <span>
-            ✦
-          </span>
-
-          <span>
-            Our Partners
-          </span>
-
-          <span>
-            ✦
-          </span>
+          {[0, 1, 2, 3].map((copy) => (
+            <div
+              key={copy}
+              className="flex shrink-0 items-center gap-12 pr-12"
+              aria-hidden={copy > 0}
+            >
+              <span>{"\u2726"}</span>
+              <span>Our Partners</span>
+              <span>{"\u2726"}</span>
+              <span>Our Partners</span>
+            </div>
+          ))}
 
         </div>
 
@@ -117,6 +111,8 @@ export default function PartnersSection() {
       >
 
         <div
+          data-reveal="zoom"
+          data-reveal-stagger
           className="
             grid
             grid-cols-2

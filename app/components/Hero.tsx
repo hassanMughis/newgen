@@ -1,5 +1,4 @@
 import ThreeAnimation from './ThreeAnimation';
-import Button from './Button';
 
 export default function Hero() {
   return (
@@ -42,15 +41,15 @@ export default function Hero() {
             }}
           >
 
-            <span className="block text-[#E2E2E2]">
+            <span className="hero-glitch-line block text-[#E2E2E2]" data-text="Creativity">
               Creativity
             </span>
 
-            <span className="block text-[#E2E2E2]">
+            <span className="hero-glitch-line block text-[#E2E2E2]" data-text="Meets">
               Meets
             </span>
 
-            <span className="block text-[#ADF531]">
+            <span className="hero-glitch-line block text-[#ADF531]" data-text="Results.">
               Results.
             </span>
 
@@ -60,7 +59,7 @@ export default function Hero() {
 
           {/* Description */}
           <p
-            className="
+            className="hero-support-copy
               mx-auto
               mt-6
               max-w-[750px]
@@ -83,7 +82,7 @@ export default function Hero() {
           {/* Buttons */}
           {/* Buttons */}
 <div
-  className="
+  className="hero-actions
     mt-12
     flex
     justify-center
