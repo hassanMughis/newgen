@@ -10,6 +10,7 @@ import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import BrandTicker from './components/BrandTicker';
 import PartnersSection from './components/PartnersSection';
+import TelephoneCTA from './components/TelephoneCTA';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Testimonials />
       <PartnersSection />
       <FAQSection />
+      <TelephoneCTA />
       <Footer />
     </main>
   );

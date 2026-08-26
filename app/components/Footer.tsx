@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
-export default function Footer() {
+type FooterProps = {
+  showCta?: boolean;
+};
+
+export default function Footer({ showCta = true }: FooterProps) {
 
   const navLinks = [
     { name: 'About Us', href: '/about-us' },
@@ -42,6 +46,7 @@ export default function Footer() {
 
       {/* CTA SECTION */}
 
+      {showCta && (
       <section
         className="
           relative
@@ -206,6 +211,7 @@ export default function Footer() {
         </div>
 
       </section>
+      )}
 
 
 

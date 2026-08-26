@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
-import PageHero from '../components/inner-pages/PageHero';
 import ServicesPageContent from '../components/inner-pages/ServicesPageContent';
+import ServicesIntro from '../components/inner-pages/services/ServicesIntro';
+import ServicesPrinciples from '../components/inner-pages/services/ServicesPrinciples';
+import ServicesShowcase from '../components/inner-pages/services/ServicesShowcase';
 import Footer from '../components/Footer';
+import TelephoneCTA from '../components/TelephoneCTA';
 
 export const metadata: Metadata = {
   title: 'Services | NextGen Digitals',
@@ -11,13 +14,11 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main className="overflow-x-clip bg-black">
-      <PageHero
-        eyebrow="Our capabilities"
-        title="Full-cycle creativity."
-        accent="One focused team."
-        description="From the first strategic question to the final production detail, we unite disciplines around one clear goal: moving your brand forward."
-      />
+      <ServicesIntro />
       <ServicesPageContent />
+      <ServicesShowcase />
+      <ServicesPrinciples />
+      <TelephoneCTA />
       <Footer />
     </main>
   );
