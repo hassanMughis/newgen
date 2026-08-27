@@ -172,11 +172,11 @@
 }
 
 .telephone-stage.is-shifted {
-  transform: translate(var(--telephone-shift), 160px) scale(1);
+  transform: translate(var(--telephone-shift), 205px) scale(1);
 }
 
 .telephone-stage.is-shifted:hover {
-  transform: translate(var(--telephone-shift), 160px) scale(1.025);
+  transform: translate(var(--telephone-shift), 205px) scale(1.025);
 }
 
 .telephone-dialer {
@@ -235,7 +235,7 @@
   position: absolute;
   z-index: 20;
   right: calc(50% + 1.5rem);
-  top: 18%;
+  top: 24%;
   width: clamp(410px, 43vw, 540px);
   padding: clamp(1.75rem, 3vw, 2.5rem);
   overflow: visible;
@@ -323,7 +323,7 @@
   .telephone-message {
     right: auto;
     left: clamp(1.5rem, 4vw, 4rem);
-    top: 28%;
+    top: 34%;
     width: min(43vw, 500px);
     transform: translateY(24px) scale(0.94);
     transform-origin: bottom right;
@@ -339,7 +339,7 @@
 
   .telephone-stage.is-shifted,
   .telephone-stage.is-shifted:hover {
-    transform: translate(clamp(140px, 22vw, 275px), 70px) scale(1);
+    transform: translate(clamp(140px, 22vw, 275px), 120px) scale(1);
   }
 }
 
@@ -347,7 +347,7 @@
   .telephone-message {
     right: auto;
     left: 50%;
-    top: 0;
+    top: 9%;
     width: min(92%, 540px);
     transform: translate(-50%, 24px) scale(0.94);
     transform-origin: bottom center;
@@ -365,20 +365,20 @@
 
   .telephone-stage.is-shifted,
   .telephone-stage.is-shifted:hover {
-    transform: translate(0, 115px) scale(1);
+    transform: translate(0, 170px) scale(1);
   }
 }
 
 @media (max-width: 639px) {
   .telephone-message {
-    top: 1%;
+    top: 7%;
     width: 96%;
     padding: 1.5rem;
   }
 
   .telephone-stage.is-shifted,
   .telephone-stage.is-shifted:hover {
-    transform: translate(0, 105px) scale(1);
+    transform: translate(0, 150px) scale(1);
   }
 
 }
