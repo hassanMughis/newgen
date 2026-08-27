@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import PortalPreloader from "./components/PortalPreloader";
 import ScrollRevealController from "./components/ScrollRevealController";
 import SmoothScroll from "./components/SmoothScroll";
+import CustomCursor from "./components/CustomCursor";
 import { Syne } from "next/font/google";
 
 const syne = Syne({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <PortalPreloader />
         <SmoothScroll />
         <ScrollRevealController />
+        <CustomCursor />
         <Navbar />
         {children}
       </body>

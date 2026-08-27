@@ -44,6 +44,7 @@ function StackingCard({
   return (
     <div className="relative h-auto mb-5 sm:mb-6 lg:h-screen lg:mb-0 lg:sticky lg:top-0 flex items-center justify-center">
       <motion.div
+        data-cursor="focus"
         style={{
           scale,
           top: `calc(0% + ${index * 22}px)`,

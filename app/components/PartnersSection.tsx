@@ -127,6 +127,7 @@ export default function PartnersSection() {
           {brands.map((brand)=>(
             <div
               key={brand.name}
+              data-cursor="focus"
               className="
                 h-[200px]
                 sm:h-[220px]

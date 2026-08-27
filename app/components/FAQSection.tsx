@@ -84,7 +84,7 @@ export default function FAQSection() {
           sm:mb-28
         ">
 
-          <div className="
+          <div data-cursor="focus" className="
             relative 
             aspect-[4/3] 
             sm:aspect-[16/10] 
@@ -121,7 +121,7 @@ export default function FAQSection() {
           </div>
 
 
-          <div className="
+          <div data-cursor="focus" className="
             relative 
             aspect-[4/3] 
             sm:aspect-[16/10] 

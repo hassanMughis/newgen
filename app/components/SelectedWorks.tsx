@@ -35,7 +35,7 @@ export default function SelectedWorks() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 w-full max-w-[1380px]">
             
             {/* Card 1: Royal Blue Brand Card */}
-            <div className="group relative aspect-[9/16] w-full rounded-[32px] sm:rounded-[38px] bg-[#08119E] border border-blue-600/30 overflow-hidden flex flex-col items-center justify-center p-6 shadow-[0_20px_50px_rgba(8,17,158,0.35)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(8,17,158,0.5)]">
+            <div data-cursor="focus" className="group relative aspect-[9/16] w-full rounded-[32px] sm:rounded-[38px] bg-[#08119E] border border-blue-600/30 overflow-hidden flex flex-col items-center justify-center p-6 shadow-[0_20px_50px_rgba(8,17,158,0.35)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(8,17,158,0.5)]">
               {/* Radial gradient sheen */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.15),_transparent_65%)]" />
               
@@ -53,7 +53,7 @@ export default function SelectedWorks() {
             </div>
 
             {/* Card 2: Pastel Rose Chocolate Brownie Card */}
-            <div className="group relative aspect-[9/16] w-full rounded-[32px] sm:rounded-[38px] bg-[#EE8FA8] border border-pink-400/30 overflow-hidden flex flex-col items-center justify-center p-6 shadow-[0_20px_50px_rgba(238,143,168,0.25)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(238,143,168,0.4)]">
+            <div data-cursor="focus" className="group relative aspect-[9/16] w-full rounded-[32px] sm:rounded-[38px] bg-[#EE8FA8] border border-pink-400/30 overflow-hidden flex flex-col items-center justify-center p-6 shadow-[0_20px_50px_rgba(238,143,168,0.25)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(238,143,168,0.4)]">
               <div className="relative z-10 flex flex-col items-center text-center">
                 {/* Center Brownie Image */}
                 <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-2xl mb-4 transition-transform duration-500 group-hover:scale-105">
@@ -75,7 +75,7 @@ export default function SelectedWorks() {
             </div>
 
             {/* Card 3: Glowing Dark Mint App Icon Card */}
-            <div className="group relative aspect-[9/16] w-full rounded-[32px] sm:rounded-[38px] bg-[#071311] border border-[#16332d] overflow-hidden flex flex-col items-center justify-center p-6 shadow-[0_20px_50px_rgba(10,35,30,0.5)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(80,240,180,0.2)]">
+            <div data-cursor="focus" className="group relative aspect-[9/16] w-full rounded-[32px] sm:rounded-[38px] bg-[#071311] border border-[#16332d] overflow-hidden flex flex-col items-center justify-center p-6 shadow-[0_20px_50px_rgba(10,35,30,0.5)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(80,240,180,0.2)]">
               {/* Mint ambient glow */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(95,245,190,0.18),_transparent_70%)]" />
 
@@ -112,7 +112,7 @@ export default function SelectedWorks() {
         >
           
           {/* Left: PCKD Tall Feature Card (Height matches right column exactly) */}
-          <div className="flex flex-col h-full group">
+          <div data-cursor="focus" className="flex flex-col h-full group">
             <div className="relative w-full flex-1 min-h-[460px] sm:min-h-[540px] lg:min-h-0 rounded-[28px] sm:rounded-[32px] overflow-hidden bg-[#0c1c18] border border-[#1b3830] shadow-2xl transition-all duration-500 group-hover:border-[#ADF531]/50 group-hover:shadow-[0_20px_60px_rgba(173,245,49,0.15)]">
               <img
                 src="/pckd.jpg"
@@ -129,7 +129,7 @@ export default function SelectedWorks() {
           <div className="flex flex-col justify-between gap-8 sm:gap-10 lg:gap-8 h-full">
             
             {/* Top: Meat Dukan */}
-            <div className="flex flex-col group">
+            <div data-cursor="focus" className="flex flex-col group">
               <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[32px] overflow-hidden bg-[#181111] border border-[#362222] shadow-2xl transition-all duration-500 group-hover:border-red-500/40 group-hover:shadow-[0_20px_60px_rgba(200,50,50,0.15)]">
                 <img
                   src="/meat-dukan.jpg"
@@ -143,7 +143,7 @@ export default function SelectedWorks() {
             </div>
 
             {/* Bottom: Funchi Storefront */}
-            <div className="flex flex-col group">
+            <div data-cursor="focus" className="flex flex-col group">
               <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[32px] overflow-hidden bg-[#181111] border border-[#362222] shadow-2xl transition-all duration-500 group-hover:border-yellow-500/40 group-hover:shadow-[0_20px_60px_rgba(240,180,40,0.15)]">
                 <img
                   src="/funchi.jpg"

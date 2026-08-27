@@ -88,6 +88,7 @@ const reviewsRow2: Review[] = [
 function ReviewCard({ review, dark = false }: { review: Review; dark?: boolean }) {
   return (
     <div
+      data-cursor="focus"
       className={`
         w-[340px] sm:w-[380px] md:w-[420px]
         shrink-0
