@@ -2,36 +2,76 @@ export default function PartnersSection() {
 
   const brands = [
     {
-      name: "Iron Claw Revenue",
-      logo: "/brands/iron-claw.svg",
+      name: "Partner Logo 01",
+      logo: "/LOGO - 0 1 1.png",
     },
     {
-      name: "Anglatin Travel",
-      logo: "/brands/anglatin.svg",
+      name: "Partner Logo 02",
+      logo: "/LOGO (2) 1.png",
     },
     {
-      name: "Instinctive Health",
-      logo: "/brands/instinctive-health.svg",
+      name: "Partner Logo 03",
+      logo: "/IMG_1981 1.png",
     },
     {
-      name: "Marquis Jewelers",
-      logo: "/brands/marquis.svg",
+      name: "Partner Logo 04",
+      logo: "/IMG_4391 (1) 1.png",
     },
     {
-      name: "French 75 Apparel",
-      logo: "/brands/french75.svg",
+      name: "Fresh Meat Shop",
+      logo: "/Fresh Meat Shop 1.png",
     },
     {
-      name: "Vytis Tours",
-      logo: "/brands/vytis.svg",
+      name: "Partner Logo 06",
+      logo: "/0034 - Copy 1.png",
     },
     {
-      name: "Broward Housing Solutions",
-      logo: "/brands/broward.svg",
+      name: "BOYA 2025",
+      logo: "/BOYA 2025  LOGO (1).pdf 1.png",
     },
     {
-      name: "Shey's Laser",
-      logo: "/brands/sheys.svg",
+      name: "TAI",
+      logo: "/TAI_Logo_WM1 1.png",
+    },
+    {
+      name: "Muhammadi Masjid",
+      logo: "/Muhammadi Masjid LOGO PNG 1 (1).png",
+    },
+    {
+      name: "Masjid Abdul Rehman Makki",
+      logo: "/Masjid Abdul Rehman Makki LOGO PNG 1 (1).png",
+    },
+    {
+      name: "Partner Logo 11",
+      logo: "/logo (1) 1 (1).png",
+    },
+    {
+      name: "Key",
+      logo: "/Key-01 1 (1).png",
+    },
+    {
+      name: "Partner Logo 13",
+      logo: "/IMG_2944 1 (1).png",
+    },
+    {
+      name: "Bayat-ul-Quran",
+      logo: "/Bayat-ul-quran 06 1 (1).png",
+    },
+    {
+      name: "Al Azeez",
+      logo: "/Al Azeez Logo PNG 1 (1).png",
+    },
+    {
+      name: "Partner Logo 16",
+      logo: "/2323 1 (1).png",
+    },
+    {
+      name: "Partner Logo 17",
+      logo: "/2024_04_19_13_25_IMG_2805 1 (1).png",
+    },
+    {
+      name: "Partner Logo 18",
+      logo: "/2022_09_08_00_28_IMG_8649 1 (1).png",
     },
   ];
 
@@ -129,14 +169,15 @@ export default function PartnersSection() {
               key={brand.name}
               data-cursor="focus"
               className="
-                h-[200px]
-                sm:h-[220px]
+                h-[170px]
+                sm:h-[190px]
                 rounded-[20px]
                 bg-[#0D0D0D]
                 flex
                 items-center
                 justify-center
-                p-10
+                p-5
+                sm:p-6
                 group
                 transition-all
                 duration-300
@@ -148,16 +189,14 @@ export default function PartnersSection() {
                 src={brand.logo}
                 alt={brand.name}
                 className="
-                  max-w-[220px]
-                  max-h-[90px]
+                  partner-logo
+                  w-full
+                  h-full
+                  max-w-[280px]
+                  max-h-[120px]
                   object-contain
-                  opacity-60
-                  grayscale
                   transition-all
                   duration-300
-                  group-hover:opacity-100
-                  group-hover:grayscale-0
-                  group-hover:scale-105
                 "
               />
 

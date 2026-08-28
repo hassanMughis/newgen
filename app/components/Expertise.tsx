@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion';
+import Link from 'next/link';
 
 interface CardData {
   number: string;
@@ -72,24 +73,24 @@ function StackingCard({
                 <div className="p-2.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-sm">
                   {card.icon}
                 </div>
-                <span className={`font-mono text-[11px] sm:text-[12px] font-bold uppercase tracking-[2px] px-3 py-1 rounded-full ${card.badgeBg} ${card.badgeText}`}>
+                <span className={`font-mono text-[9px] sm:text-[10px] lg:text-[11px] font-bold uppercase tracking-[1.6px] px-3 py-1 rounded-full ${card.badgeBg} ${card.badgeText}`}>
                   {card.tag}
                 </span>
               </div>
-              <span className={`font-mono text-[15px] sm:text-[17px] font-bold ${card.numberColor} tracking-[3px]`}>
+              <span className={`font-mono text-[12px] sm:text-[14px] lg:text-[15px] font-bold ${card.numberColor} tracking-[2.5px]`}>
                 {card.number}
               </span>
             </div>
 
             {/* Title, Subtitle & Description */}
             <div className="my-auto py-2">
-              <span className={`block font-mono text-[12px] sm:text-[13px] font-bold uppercase tracking-[2.5px] ${card.numberColor} mb-2`}>
+              <span className={`block font-mono text-[10px] sm:text-[11px] lg:text-[12px] font-bold uppercase tracking-[2px] ${card.numberColor} mb-2`}>
                 {card.subtitle}
               </span>
-              <h3 className={`font-sans font-black ${card.textColor} text-[2rem] sm:text-[2.6rem] lg:text-[3rem] xl:text-[3.4rem] tracking-tight leading-[1.08] mb-4`}>
+              <h3 className={`font-sans font-black ${card.textColor} text-[1.75rem] sm:text-[2.15rem] lg:text-[2.6rem] xl:text-[3rem] tracking-tight leading-[1.08] mb-4`}>
                 {card.title}
               </h3>
-              <p className={`font-sans ${card.descColor} text-[1rem] sm:text-[1.1rem] lg:text-[1.15rem] xl:text-[1.22rem] leading-[1.6] max-w-2xl font-normal`}>
+              <p className={`font-sans ${card.descColor} text-[14px] sm:text-[15px] lg:text-[16px] xl:text-[17px] leading-[1.55] max-w-2xl font-normal`}>
                 {card.description}
               </p>
 
@@ -98,7 +99,7 @@ function StackingCard({
                 {card.deliverables.map((item) => (
                   <span
                     key={item}
-                    className={`font-mono text-[11px] sm:text-[12px] font-semibold px-3.5 py-1.5 rounded-full border ${card.tagBg} ${card.tagText}`}
+                    className={`font-mono text-[9px] sm:text-[10px] lg:text-[11px] font-semibold px-3.5 py-1.5 rounded-full border ${card.tagBg} ${card.tagText}`}
                   >
                     {item}
                   </span>
@@ -108,12 +109,12 @@ function StackingCard({
 
             {/* Bottom Footer Info */}
             <div className={`mt-6 pt-4 border-t ${card.lineColor} flex items-center justify-between`}>
-              <span className={`font-sans text-[12px] sm:text-[13px] font-medium ${card.descColor} tracking-wide`}>
+              <span className={`font-sans text-[10px] sm:text-[11px] lg:text-[12px] font-medium ${card.descColor} tracking-wide`}>
                 NextGen Digital Capabilities &amp; Execution
               </span>
-              <span className={`font-mono text-[11px] sm:text-[12px] font-bold uppercase tracking-[2px] ${card.textColor}`}>
+              <Link href="/services" className={`font-mono text-[9px] sm:text-[10px] lg:text-[11px] font-bold uppercase tracking-[1.6px] ${card.textColor} transition-opacity hover:opacity-60`}>
                 Explore Service →
-              </span>
+              </Link>
             </div>
 
           </div>
@@ -157,12 +158,12 @@ export default function Expertise() {
   const cards: CardData[] = [
     {
       number: '01',
-      tag: 'Experience Architecture',
-      subtitle: 'Interface & User Journeys',
-      title: 'UI/UX Design',
+      tag: 'Social Media Strategy',
+      subtitle: 'Performance, Content & Audience Insights',
+      title: 'Social Media Audit',
       description:
-        'Crafting intuitive, high-performance interfaces where human psychology meets avant-garde aesthetics. We build design systems, fluid micro-interactions, and frictionless user flows designed to convert and captivate.',
-      deliverables: ['Design Systems', 'Interactive Prototyping', 'User Research & Audits', 'Mobile & Web UI'],
+        "A social media audit systematically evaluates, analyzes, and optimizes a business's profiles, performance metrics, and content strategies. Regular audits help ecommerce businesses uncover performance gaps, refine target audience engagement, stay ahead of competitors, and maintain a strong online presence.",
+      deliverables: ['Profile Evaluation', 'Performance Analysis', 'Content Review', 'Audience Insights'],
       icon: (
         <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2v4M12 6L7 20M12 6l5 14M9 15h6" />
@@ -179,16 +180,16 @@ export default function Expertise() {
       tagBg: 'bg-black/5 border-black/15',
       tagText: 'text-black/90',
       imageSrc: '/pngtree-silver-metallic-shape-outlined-png-image_11665385 1.png',
-      imageAlt: 'UI/UX Design Silver Metallic Shape',
+      imageAlt: 'Social Media Audit Silver Metallic Shape',
     },
     {
       number: '02',
-      tag: 'Engineering & Creative Code',
-      subtitle: 'Modern Web Architecture',
-      title: 'Web Development',
+      tag: 'Search & Content Strategy',
+      subtitle: 'Organic Visibility & Brand Authority',
+      title: 'SEO & Content Writing',
       description:
-        'Building robust, scalable digital architectures using modern frameworks, Three.js/WebGL, and custom creative coding to ensure your platform performs with unmatched speed and aesthetic perfection.',
-      deliverables: ['Next.js / React', 'Creative WebGL / 3D', 'Scalable APIs', 'Performance Optimization'],
+        'SEO and strategic content writing work together to increase measurable online success and brand visibility. SEO provides the technical roadmap that helps search engines like Google discover your website, while compelling content engages visitors, solves their problems, and builds trust. Combining technical optimization, targeted keyword placement, and high-value messaging drives organic traffic and turns standard visitors into loyal, paying customers.',
+      deliverables: ['Technical SEO', 'Keyword Strategy', 'Content Writing', 'Conversion Copy'],
       icon: (
         <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
           <path d="M8 7L3 12l5 5M16 7l5 5-5 5" />
@@ -204,17 +205,17 @@ export default function Expertise() {
       tagBg: 'bg-black/5 border-black/15',
       tagText: 'text-black/90',
       imageSrc: '/image 4.png',
-      imageAlt: 'Web Development Abstract Shape',
+      imageAlt: 'SEO and Content Writing Abstract Shape',
       visualPosition: 'top-0 right-0 transform translate-x-[15%] -translate-y-[15%]',
     },
     {
       number: '03',
-      tag: 'Spatial & Visual Artistry',
-      subtitle: 'Dynamic Visual Systems',
-      title: 'Motion & 3D',
+      tag: 'Visual Communication',
+      subtitle: 'Creative Assets & Brand Identity',
+      title: 'Graphic Designing',
       description:
-        'Elevating brand narratives through cinematic motion graphics, 3D product visualizations, and spatial interactive assets that seize viewer focus, communicate value instantly, and boost engagement.',
-      deliverables: ['3D Product Renders', 'Motion Graphics', 'Spatial Design', 'Interactive Animations'],
+        'Graphic design powers modern visual communication and brand identity. Through typography, color psychology, imagery, and structured layouts, it turns complex messages into scroll-stopping visuals. From memorable logos, flyers, and brochures to high-converting social creatives and website assets, impactful design shapes public perception, builds trust and authority, and persuades target audiences to engage, connect, and become loyal clients.',
+      deliverables: ['Logo Identity', 'Marketing Collateral', 'Social Creatives', 'Website Visuals'],
       icon: (
         <svg className="w-6 h-6 text-[#ADF531]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <ellipse cx="12" cy="12" rx="7" ry="4" transform="rotate(-30 12 12)" />
@@ -232,16 +233,16 @@ export default function Expertise() {
       tagBg: 'bg-white/5 border-white/15',
       tagText: 'text-white/85',
       imageSrc: '/01_comp-img.webp',
-      imageAlt: 'Motion & 3D Visual Asset',
+      imageAlt: 'Graphic Designing Visual Asset',
     },
     {
       number: '04',
-      tag: 'Brand Strategy & Identity',
-      subtitle: 'Market Positioning & Growth',
-      title: 'Digital Branding',
+      tag: 'Experience Architecture',
+      subtitle: 'Interface & User Journeys',
+      title: 'UX/UI Web Designing',
       description:
-        'Building iconic visual identities, comprehensive design guidelines, and cohesive digital touchpoints that scale effortlessly across global channels and resonate deeply with modern audiences.',
-      deliverables: ['Visual Identity', 'Brand Guidelines', 'Typography & Assets', 'Market Positioning'],
+        'UX/UI web design powers every successful digital product. User Experience (UX) uses wireframing, architecture, and user psychology to create an effortless customer journey, while User Interface (UI) shapes high-end aesthetics, typography, interactive elements, and layouts. Blending research-backed functionality with modern visual appeal creates websites that are both stunning and intuitive, reducing bounce rates, boosting engagement, and maximizing sales conversions.',
+      deliverables: ['UX Research', 'Wireframing', 'Interface Design', 'Interactive Prototyping'],
       icon: (
         <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 3v3M12 18v3M3 12h3M18 12h3M6.3 6.3l2.2 2.2M15.5 15.5l2.2 2.2M6.3 17.7l2.2-2.2M15.5 8.5l2.2-2.2" />
@@ -257,7 +258,59 @@ export default function Expertise() {
       tagBg: 'bg-black/5 border-black/15',
       tagText: 'text-black/90',
       imageSrc: '/iridescent-heart.png',
-      imageAlt: 'Digital Branding Iridescent Heart Art',
+      imageAlt: 'UX/UI Web Designing Iridescent Heart Art',
+    },
+    {
+      number: '05',
+      tag: 'Creative Production',
+      subtitle: 'Visual Storytelling & Multimedia',
+      title: 'Media & Production',
+      description:
+        'Media and production bring brand stories to life through dynamic visual storytelling. From pre-production planning and high-definition video shoots to professional photography, motion graphics, and post-production editing, they turn complex ideas into captivating multimedia. Tailored assets for ad campaigns, social media, corporate showcases, and commercial promotions build emotional connections, strengthen brand authority, and drive engagement across digital platforms.',
+      deliverables: ['Video Production', 'Photography', 'Motion Graphics', 'Post-Production'],
+      icon: (
+        <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="5" width="14" height="14" rx="2" />
+          <path d="m17 10 4-2v8l-4-2" />
+        </svg>
+      ),
+      bgClass: 'bg-[#ADF531] text-black border border-[#c4ff3e]/40 shadow-[0_35px_80px_rgba(173,245,49,0.35)]',
+      textColor: 'text-black',
+      descColor: 'text-black/85',
+      lineColor: 'border-black/15',
+      numberColor: 'text-black/45',
+      badgeBg: 'bg-black/10',
+      badgeText: 'text-black font-semibold',
+      tagBg: 'bg-black/5 border-black/15',
+      tagText: 'text-black/90',
+      imageSrc: '/pngtree-3d-black-squiggle-png-wavy-shape-clipart-png-image_16282598 1 (1).png',
+      imageAlt: 'Black 3D Squiggle for Media and Production',
+    },
+    {
+      number: '06',
+      tag: 'Digital Engineering',
+      subtitle: 'Performance, Security & Scale',
+      title: 'Website Development',
+      description:
+        "Website development forms the core technical architecture of your business's digital infrastructure. It transforms custom design concepts into fully functional, high-performing websites through custom coding, clean programming, secure database integration, and seamless backend development. Responsive mobile optimization, fast loading speeds, robust security, and e-commerce integration ensure your platform performs flawlessly, protects user data, and delivers an exceptional experience that powers business growth.",
+      deliverables: ['Custom Development', 'Mobile Optimization', 'E-Commerce', 'Security & Performance'],
+      icon: (
+        <svg className="w-6 h-6 text-[#ADF531]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M8 7 3 12l5 5M16 7l5 5-5 5M14 4l-4 16" />
+        </svg>
+      ),
+      bgClass: 'bg-[#212326] text-white border border-white/10 shadow-[0_35px_80px_rgba(0,0,0,0.85)]',
+      textColor: 'text-white',
+      descColor: 'text-white/75',
+      lineColor: 'border-white/15',
+      numberColor: 'text-white/35',
+      badgeBg: 'bg-[#ADF531]/15',
+      badgeText: 'text-[#ADF531] font-semibold',
+      tagBg: 'bg-white/5 border-white/15',
+      tagText: 'text-white/85',
+      imageSrc: '/3d-chrome-star-with-sharp-futuristic-design-on-transparent-background-modern-metallic-element-cut-out-png 1.png',
+      imageAlt: 'Chrome Futuristic Star for Website Development',
+      visualPosition: 'top-0 right-0 transform translate-x-[15%] -translate-y-[15%]',
     },
   ];
 
@@ -277,14 +330,15 @@ export default function Expertise() {
         {/* ── INTERACTIVE FRAMER MOTION STACKING CARDS ── */}
         <div className="relative">
           {cards.map((card, index) => {
-            const targetScale = 1 - (cards.length - index) * 0.05;
+            const stackProgress = index / cards.length;
+            const targetScale = 1 - ((cards.length - index) / cards.length) * 0.2;
             return (
               <StackingCard
                 key={card.number}
                 card={card}
                 index={index}
                 progress={scrollYProgress}
-                range={[index * 0.25, 1]}
+                range={[stackProgress, 1]}
                 targetScale={targetScale}
               />
             );

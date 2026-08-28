@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function CTASection() {
   return (
     <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-black py-20 lg:py-28 px-4 sm:px-6 md:px-8">
@@ -72,7 +74,7 @@ export default function CTASection() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto">
-          <a
+          <Link
             href="/contact"
             className="
               w-full sm:w-auto
@@ -90,10 +92,10 @@ export default function CTASection() {
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
 
-          <a
-            href="#services"
+          <Link
+            href="/services"
             className="
               w-full sm:w-auto
               inline-flex items-center justify-center gap-2.5
@@ -106,7 +108,7 @@ export default function CTASection() {
             "
           >
             Explore Services
-          </a>
+          </Link>
         </div>
 
       </div>

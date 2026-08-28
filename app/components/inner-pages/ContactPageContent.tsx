@@ -12,7 +12,22 @@ export default function ContactPageContent() {
 
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const subject = `Project inquiry from ${form.get('name') || 'a new client'}`;
+    const body = [
+      `Name: ${form.get('name') || ''}`,
+      `Email: ${form.get('email') || ''}`,
+      `Company: ${form.get('company') || ''}`,
+      `Service: ${form.get('service') || ''}`,
+      `Budget: ${form.get('budget') || ''}`,
+      `Timeline: ${form.get('timeline') || ''}`,
+      '',
+      'Project details:',
+      `${form.get('message') || ''}`,
+    ].join('\n');
+
     setSubmitted(true);
+    window.location.href = `mailto:hello@nextgendigitals.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -44,7 +59,7 @@ export default function ContactPageContent() {
         <input type="hidden" name="budget" value={budget} />
 
         <button type="submit" className="mt-9 flex h-14 w-full items-center justify-center rounded-full border border-white/25 font-mono text-xs font-bold uppercase tracking-[0.2em] transition hover:border-[#ADF531] hover:bg-[#ADF531] hover:text-black">
-          {submitted ? 'Message ready — thank you' : 'Send project inquiry'}
+          {submitted ? 'Opening your email app…' : 'Send project inquiry'}
         </button>
       </form>
     </section>

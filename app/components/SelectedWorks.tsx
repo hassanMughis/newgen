@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function SelectedWorks() {
   return (
     <section id="work" className="relative bg-black text-white py-16 sm:py-24 lg:py-28 overflow-hidden">
@@ -7,12 +9,12 @@ export default function SelectedWorks() {
 
         {/* ── SECTION HEADER ── */}
         <div data-reveal="left" className="flex items-end justify-end pb-4">
-          <a
-            href="#work"
+          <Link
+            href="/work"
             className="font-mono text-[11px] sm:text-[12px] font-bold text-[#ADF531] tracking-[2px] uppercase hover:text-[#c4ff3e] hover:underline pb-1 transition-all"
           >
             VIEW ALL [+]
-          </a>
+          </Link>
         </div>
         
         {/* ── TOP SHOWCASE: Vertical "work" label + 3 Phone Cards ── */}

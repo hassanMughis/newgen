@@ -1,4 +1,5 @@
 import ThreeAnimation from './ThreeAnimation';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -94,8 +95,12 @@ export default function Hero() {
 >
 
   {/* Primary Button */}
-  <button
+  <Link
+    href="/work"
     className="
+      inline-flex
+      items-center
+      justify-center
       w-[174px]
       h-[52px]
       bg-[#BDFE00]
@@ -111,13 +116,17 @@ export default function Hero() {
     "
   >
     Explore Work
-  </button>
+  </Link>
 
 
 
   {/* Outline Button */}
-  <button
+  <Link
+    href="/contact"
     className="
+      inline-flex
+      items-center
+      justify-center
       w-[184px]
       h-[52px]
       bg-transparent
@@ -135,7 +144,7 @@ export default function Hero() {
     "
   >
     Start Project
-  </button>
+  </Link>
 
 </div>
 

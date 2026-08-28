@@ -16,20 +16,24 @@ export default function Footer({ showCta = true }: FooterProps) {
 
   const socials = [
     {
-      name: "Social 1",
-      icon: "/Vector.svg"
+      name: "Instagram",
+      icon: "/Vector.svg",
+      href: "https://instagram.com/nextgendigitals"
     },
     {
-      name: "Social 2",
-      icon: "/Vector-1.svg"
+      name: "LinkedIn",
+      icon: "/Vector-1.svg",
+      href: "https://linkedin.com/company/nextgen-digitals"
     },
     {
-      name: "Social 3",
-      icon: "/Vector-2.svg"
+      name: "Behance",
+      icon: "/Vector-2.svg",
+      href: "https://behance.net/nextgendigitals"
     },
     {
-      name: "Social 4",
-      icon: "/Vector-3.svg"
+      name: "Dribbble",
+      icon: "/Vector-3.svg",
+      href: "https://dribbble.com/nextgendigitals"
     }
   ];
 
@@ -249,15 +253,17 @@ export default function Footer({ showCta = true }: FooterProps) {
             "
           >
 
-            <img
-              src="/ngt-logo-cropped.png"
-              alt="NextGen Digitals"
-              className="
-                h-12
-                w-auto
-                object-contain
-              "
-            />
+            <Link href="/" aria-label="NextGen Digitals home">
+              <img
+                src="/ngt-logo-cropped.png"
+                alt="NextGen Digitals"
+                className="
+                  h-12
+                  w-auto
+                  object-contain
+                "
+              />
+            </Link>
 
 
 
@@ -336,8 +342,10 @@ export default function Footer({ showCta = true }: FooterProps) {
               {socials.map((social)=>(
                 <a
                   key={social.name}
-                  href="#"
+                  href={social.href}
                   aria-label={social.name}
+                  target="_blank"
+                  rel="noreferrer"
                   className="
                     h-10
                     w-10

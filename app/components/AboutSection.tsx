@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function AboutSection() {
   return (
     <section
@@ -116,8 +118,8 @@ export default function AboutSection() {
 
             {/* Square Hero-Style Button */}
             <div>
-              <a
-                href="#services"
+              <Link
+                href="/about-us"
                 className="
                   inline-flex items-center justify-center gap-2.5 xl:gap-3
                   bg-[#ADF531] text-black
@@ -132,7 +134,7 @@ export default function AboutSection() {
                 <svg className="h-3.5 w-3.5 xl:h-4 xl:w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
           </div>

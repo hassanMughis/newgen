@@ -1116,3 +1116,22 @@ html.portal-is-loading body {
 .animate-marquee-right:hover {
   animation-play-state: paused;
 }
+
+/* Touch devices have no dependable hover state, so partner logos remain colored. */
+.partner-logo {
+  opacity: 1;
+  filter: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .partner-logo {
+    opacity: 0.6;
+    filter: grayscale(1);
+  }
+
+  .group:hover .partner-logo {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.05);
+  }
+}
