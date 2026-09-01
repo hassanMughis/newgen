@@ -189,8 +189,8 @@ export default function PartnersSection() {
                 flex
                 items-center
                 justify-center
-                p-10
-                md:p-8
+                p-8
+                md:p-20
                 group
                 transition-all
                 duration-300
@@ -206,10 +206,6 @@ export default function PartnersSection() {
                   partner-logo
                   w-full
                   h-full
-                  max-w-[210px]
-                  max-h-[85px]
-                  md:max-w-[280px]
-                  md:max-h-[120px]
                   object-contain
                   transition-all
                   duration-300
