@@ -1,4 +1,9 @@
+"use client";
+
+import { useState } from "react";
+
 export default function PartnersSection() {
+  const [activeBrand, setActiveBrand] = useState<number | null>(null);
 
   const brands = [
     {
@@ -72,6 +77,10 @@ export default function PartnersSection() {
     {
       name: "Partner Logo 18",
       logo: "/2022_09_08_00_28_IMG_8649 1 (1).png",
+    },
+    {
+      name: "A&S Apparel",
+      logo: "/A&S Apparel 1.png",
     },
   ];
 
@@ -164,25 +173,30 @@ export default function PartnersSection() {
         >
 
 
-          {brands.map((brand)=>(
-            <div
+          {brands.map((brand, index)=>(
+            <button
+              type="button"
               key={brand.name}
               data-cursor="focus"
+              aria-label={`Show ${brand.name} in color`}
+              aria-pressed={activeBrand === index}
+              onClick={() => setActiveBrand((current) => current === index ? null : index)}
               className="
-                h-[170px]
-                sm:h-[190px]
+                partner-logo-card
+                aspect-[6/5]
                 rounded-[20px]
                 bg-[#0D0D0D]
                 flex
                 items-center
                 justify-center
-                p-5
-                sm:p-6
+                p-10
+                md:p-8
                 group
                 transition-all
                 duration-300
                 hover:bg-[#111111]
               "
+              data-active={activeBrand === index ? "true" : "false"}
             >
 
               <img
@@ -192,15 +206,17 @@ export default function PartnersSection() {
                   partner-logo
                   w-full
                   h-full
-                  max-w-[280px]
-                  max-h-[120px]
+                  max-w-[210px]
+                  max-h-[85px]
+                  md:max-w-[280px]
+                  md:max-h-[120px]
                   object-contain
                   transition-all
                   duration-300
                 "
               />
 
-            </div>
+            </button>
           ))}
 
 

@@ -1117,21 +1117,28 @@ html.portal-is-loading body {
   animation-play-state: paused;
 }
 
-/* Touch devices have no dependable hover state, so partner logos remain colored. */
+/* Partner logos are muted until hovered with a mouse or selected by touch. */
 .partner-logo {
-  opacity: 1;
-  filter: none;
+  opacity: 0.9;
+  filter: grayscale(1) brightness(1.6) contrast(0.8);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .partner-logo {
-    opacity: 0.6;
-    filter: grayscale(1);
-  }
-
   .group:hover .partner-logo {
     opacity: 1;
     filter: grayscale(0);
     transform: scale(1.05);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .partner-logo-card[data-active="true"] .partner-logo {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: scale(1.05);
+  }
+
+  .partner-logo-card[data-active="true"] {
+    background: #111111;
   }
 }
