@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutUsPage() {
   return (
-    <main className="overflow-x-clip bg-black">
+    <main className="overflow-x-clip bg-[#f6f6f4]">
       <AboutPageContent />
       <TelephoneCTA />
       <Footer />

@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import PortalPreloader from "./components/PortalPreloader";
 import ScrollRevealController from "./components/ScrollRevealController";
-import SmoothScroll from "./components/SmoothScroll";
-import CustomCursor from "./components/CustomCursor";
-import { Syne } from "next/font/google";
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "NextGen Digitals - Creativity Meets Results",
@@ -22,13 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${syne.variable} h-full antialiased`}
+      className="portal-has-entered h-full antialiased"
     >
-      <body className="min-h-full flex flex-col bg-black" suppressHydrationWarning>
-        <PortalPreloader />
-        <SmoothScroll />
+      <body className="min-h-full flex flex-col bg-[#f6f6f4]" suppressHydrationWarning>
         <ScrollRevealController />
-        <CustomCursor />
         <Navbar />
         {children}
       </body>

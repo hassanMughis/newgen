@@ -85,7 +85,7 @@ const reviewsRow2: Review[] = [
   },
 ];
 
-function ReviewCard({ review, dark = false }: { review: Review; dark?: boolean }) {
+function ReviewCard({ review }: { review: Review; dark?: boolean }) {
   return (
     <div
       data-cursor="focus"
@@ -96,9 +96,7 @@ function ReviewCard({ review, dark = false }: { review: Review; dark?: boolean }
         p-6 sm:p-7
         flex flex-col gap-4
         border
-        ${dark
-          ? 'bg-[#090909] border-white/10 shadow-[0_12px_35px_rgba(0,0,0,0.72)]'
-          : 'bg-[#ADF531] border-[#c8ff3e]/30 shadow-[0_8px_32px_rgba(173,245,49,0.18)]'}
+        bg-white border-[#e3e4e1] shadow-[0_12px_35px_rgba(23,24,26,0.08)]
       `}
     >
       {/* Top Row: Avatar + Name/Role + Quote Icon */}
@@ -107,13 +105,13 @@ function ReviewCard({ review, dark = false }: { review: Review; dark?: boolean }
           <img
             src={review.avatar}
             alt={review.name}
-            className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 flex-shrink-0 ${dark ? 'border-white/15' : 'border-black/15'}`}
+            className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 flex-shrink-0 border-[#e3e4e1]"
           />
           <div>
-            <p className={`font-sans font-bold text-[15px] sm:text-[17px] leading-tight ${dark ? 'text-white' : 'text-black'}`}>
+            <p className="font-sans font-bold text-[15px] sm:text-[17px] leading-tight text-[#17181a]">
               {review.name}
             </p>
-            <p className={`font-sans text-[12px] sm:text-[13px] leading-tight mt-0.5 ${dark ? 'text-white/45' : 'text-black/70'}`}>
+            <p className="font-sans text-[12px] sm:text-[13px] leading-tight mt-0.5 text-[#6b6f76]">
               {review.role}
             </p>
           </div>
@@ -124,12 +122,12 @@ function ReviewCard({ review, dark = false }: { review: Review; dark?: boolean }
           src="/quote-icon.svg"
           alt="quote"
           className="w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 opacity-80"
-          style={{ filter: dark ? 'brightness(0) invert(1)' : 'brightness(0)' }}
+          style={{ filter: 'brightness(0)' }}
         />
       </div>
 
       {/* Testimonial Text */}
-      <p className={`font-sans text-[13.5px] sm:text-[14.5px] leading-[1.65] font-normal ${dark ? 'text-white/65' : 'text-black/90'}`}>
+      <p className="font-sans text-[13.5px] sm:text-[14.5px] leading-[1.65] font-normal text-[#6b6f76]">
         {review.testimonial}
       </p>
     </div>
@@ -144,17 +142,17 @@ export default function Testimonials({
   darkCards?: boolean;
 }) {
   return (
-    <section className={`relative overflow-hidden bg-black text-white ${hideHeader ? 'pb-12 pt-8 sm:pb-16 sm:pt-10' : 'py-24 sm:py-32'}`}>
+    <section className={`relative overflow-hidden text-[#17181a] ${darkCards ? 'bg-[#ececea]' : 'bg-[#f6f6f4]'} ${hideHeader ? 'pb-12 pt-8 sm:pb-16 sm:pt-10' : 'py-24 sm:py-32'}`}>
       {/* Background radial glow */}
-      <div className={`absolute inset-0 pointer-events-none ${darkCards ? 'bg-black' : 'bg-[radial-gradient(ellipse_at_top,_rgba(173,245,49,0.06),_transparent_70%)]'}`} />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.65),_transparent_68%)]" />
 
       {/* Section Header */}
       {!hideHeader && (
         <div data-reveal="up" className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10 text-center mb-14 sm:mb-16">
-          <h2 className="font-syne font-semibold text-white text-[2.4rem] sm:text-[3.8rem] md:text-[5.2rem] lg:text-[6rem] tracking-tight leading-none mb-4">
-            Built With Care. <span className="text-[#ADF531]">Trusted By</span> Brands.
+          <h2 className="font-syne font-semibold text-[#17181a] text-[2.4rem] sm:text-[3.8rem] md:text-[5.2rem] lg:text-[6rem] tracking-tight leading-none mb-4">
+            Built With Care. <span className="text-[#8cc63f]">Trusted By</span> Brands.
           </h2>
-          <p className="font-sans text-[#a0a0a0] text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-normal">
+          <p className="font-sans text-[#6b6f76] text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-normal">
             Our clients share their real experiences partnering with NextGen Digital — driving measurable ROI, avant-garde design, and high-impact digital growth.
           </p>
         </div>
@@ -162,8 +160,8 @@ export default function Testimonials({
 
       {/* Marquee Row 1 — Left */}
       <div className="relative overflow-hidden w-full mb-5 sm:mb-6">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-28 md:w-36 bg-gradient-to-r from-black via-black/80 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-28 md:w-36 bg-gradient-to-l from-black via-black/80 to-transparent" />
+        <div className={`pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r ${darkCards ? 'from-[#ececea] via-[#ececea]/85' : 'from-[#f6f6f4] via-[#f6f6f4]/85'} to-transparent sm:w-28 md:w-36`} />
+        <div className={`pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l ${darkCards ? 'from-[#ececea] via-[#ececea]/85' : 'from-[#f6f6f4] via-[#f6f6f4]/85'} to-transparent sm:w-28 md:w-36`} />
 
         <div className="flex w-max animate-marquee-left gap-4 sm:gap-5">
           <div className="flex gap-4 sm:gap-5 shrink-0">
@@ -181,8 +179,8 @@ export default function Testimonials({
 
       {/* Marquee Row 2 — Right */}
       <div className="relative overflow-hidden w-full">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-28 md:w-36 bg-gradient-to-r from-black via-black/80 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-28 md:w-36 bg-gradient-to-l from-black via-black/80 to-transparent" />
+        <div className={`pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r ${darkCards ? 'from-[#ececea] via-[#ececea]/85' : 'from-[#f6f6f4] via-[#f6f6f4]/85'} to-transparent sm:w-28 md:w-36`} />
+        <div className={`pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l ${darkCards ? 'from-[#ececea] via-[#ececea]/85' : 'from-[#f6f6f4] via-[#f6f6f4]/85'} to-transparent sm:w-28 md:w-36`} />
 
         <div className="flex w-max animate-marquee-right gap-4 sm:gap-5">
           <div className="flex gap-4 sm:gap-5 shrink-0">

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const stats = [
   { index: "01", number: "40+", label: "Digital launches", tone: "lime" },
   { index: "02", number: "12", label: "Connected disciplines", tone: "dark" },
@@ -10,11 +12,11 @@ export default function AboutIntro() {
       className="
         relative
         overflow-hidden
-        bg-black
+        bg-[#f6f6f4]
         px-4
         pb-20
         pt-36
-        text-white
+        text-[#17181a]
         sm:px-6
         sm:pb-28
         sm:pt-44
@@ -23,6 +25,16 @@ export default function AboutIntro() {
         xl:px-10
       "
     >
+
+      <Image
+        src="/hero-about.png"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[68%_center] opacity-40 sm:opacity-65 lg:opacity-100"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[#f6f6f4]/75 sm:bg-[#f6f6f4]/60 lg:bg-[linear-gradient(90deg,rgba(246,246,244,0.98)_0%,rgba(246,246,244,0.88)_48%,rgba(246,246,244,0.28)_100%)]" />
 
       {/* Ambient Glow */}
       <div
@@ -34,7 +46,7 @@ export default function AboutIntro() {
           hidden
           h-[850px]
           w-[850px]
-          bg-[radial-gradient(circle,rgba(173,245,49,.12),transparent_70%)]
+          bg-[radial-gradient(circle,rgba(140,198,63,.12),transparent_70%)]
           lg:block
         "
       />
@@ -58,7 +70,7 @@ export default function AboutIntro() {
                 text-[9px]
                 uppercase
                 tracking-[0.28em]
-                text-[#ADF531]
+                text-[#8cc63f]
               "
             >
 
@@ -68,8 +80,8 @@ export default function AboutIntro() {
                   w-2
                   animate-pulse
                   rounded-full
-                  bg-[#ADF531]
-                  shadow-[0_0_16px_#ADF531]
+                  bg-[#8cc63f]
+                  shadow-[0_0_16px_#8cc63f]
                 "
               />
 
@@ -92,7 +104,7 @@ export default function AboutIntro() {
             >
               Different minds.
 
-              <span className="mt-2 block text-[#ADF531]">
+              <span className="mt-2 block text-[#8cc63f]">
                 One digital pulse.
               </span>
 
@@ -114,7 +126,7 @@ export default function AboutIntro() {
             grid
             gap-6
             border-t
-            border-white/15
+            border-[#e3e4e1]
             pt-6
             md:grid-cols-[1fr_.72fr]
             lg:mt-16
@@ -126,7 +138,7 @@ export default function AboutIntro() {
               max-w-[820px]
               text-base
               leading-7
-              text-white/60
+              text-[#6b6f76]
               sm:text-lg
               sm:leading-8
             "
@@ -145,7 +157,7 @@ export default function AboutIntro() {
               uppercase
               leading-5
               tracking-[0.16em]
-              text-white/30
+              text-[#6b6f76]
               md:justify-self-end
             "
           >
@@ -200,8 +212,8 @@ export default function AboutIntro() {
 
                 ${
                   stat.tone === "lime"
-                    ? "border-[#ADF531] bg-[#ADF531] text-black"
-                    : "border-white/10 bg-[#0a0a0a] text-white"
+                    ? "border-[#8cc63f] bg-[#8cc63f] text-black"
+                    : "border-[#e3e4e1] bg-white text-[#17181a]"
                 }
               `}
             >

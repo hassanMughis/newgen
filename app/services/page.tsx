@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="overflow-x-clip bg-black">
+    <main className="overflow-x-clip bg-[#f6f6f4]">
       <ServicesIntro />
       <ServicesPageContent />
       <ServicesShowcase />

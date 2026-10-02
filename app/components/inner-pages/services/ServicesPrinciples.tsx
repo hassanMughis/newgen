@@ -83,29 +83,29 @@ function PrincipleRow({ principle }: { principle: Principle }) {
     <article
       onPointerEnter={startFloating}
       onPointerLeave={settleIcon}
-      className="group grid gap-4 border-b border-white/14 px-3 py-7 transition-[background-color,border-color,box-shadow] duration-500 first:border-t hover:border-[#ADF531]/30 hover:bg-[#ADF531]/[0.055] hover:shadow-[inset_3px_0_0_#ADF531] sm:grid-cols-[52px_76px_.7fr_1fr] sm:items-center sm:gap-6 sm:px-4 lg:grid-cols-[60px_92px_.7fr_1fr] lg:gap-7 lg:py-8"
+      className="group grid gap-4 border-b border-[#e3e4e1] px-3 py-7 transition-[background-color,border-color,box-shadow] duration-500 first:border-t hover:border-[#8cc63f]/30 hover:bg-[#8cc63f]/[0.055] hover:shadow-[inset_3px_0_0_#8cc63f] sm:grid-cols-[52px_76px_.7fr_1fr] sm:items-center sm:gap-6 sm:px-4 lg:grid-cols-[60px_92px_.7fr_1fr] lg:gap-7 lg:py-8"
     >
-      <span className="font-mono text-[9px] tracking-[0.2em] text-[#ADF531]">/ {principle.number}</span>
+      <span className="font-mono text-[9px] tracking-[0.2em] text-[#8cc63f]">/ {principle.number}</span>
       <div className="relative h-16 w-20 sm:h-[70px] sm:w-[76px] lg:h-[78px] lg:w-[92px]">
         <div ref={iconRef} className="relative h-full w-full will-change-transform">
           <Image src={principle.icon} alt="" fill sizes="92px" className="object-contain drop-shadow-[0_10px_20px_rgba(255,255,255,0.08)]" />
         </div>
       </div>
-      <h3 className="font-[family-name:var(--font-syne)] text-xl font-medium tracking-[-0.04em] transition-colors duration-500 group-hover:text-[#ADF531] sm:text-2xl">{principle.title}</h3>
-      <p className="max-w-[560px] text-sm leading-6 text-white/45 transition-colors duration-500 group-hover:text-white/65">{principle.copy}</p>
+      <h3 className="font-[family-name:var(--font-syne)] text-xl font-medium tracking-[-0.04em] transition-colors duration-500 group-hover:text-[#8cc63f] sm:text-2xl">{principle.title}</h3>
+      <p className="max-w-[560px] text-sm leading-6 text-[#6b6f76] transition-colors duration-500 group-hover:text-[#6b6f76]">{principle.copy}</p>
     </article>
   );
 }
 
 export default function ServicesPrinciples() {
   return (
-    <section className="bg-black px-4 pb-24 text-white sm:px-6 sm:pb-32 lg:px-8 lg:pb-40 xl:px-10">
-      <div className="mx-auto max-w-[1920px] border-t border-white/15 pt-8">
+    <section className="bg-white px-4 py-24 text-[#17181a] sm:px-6 sm:py-32 lg:px-8 lg:py-40 xl:px-10">
+      <div className="mx-auto max-w-[1920px] border-t border-[#e3e4e1] pt-8">
         <div className="grid gap-12 lg:grid-cols-[.58fr_1.42fr] lg:gap-16">
           <div data-reveal="left" className="lg:sticky lg:top-32 lg:self-start">
-            <p className="font-mono text-[9px] uppercase tracking-[0.26em] text-[#ADF531]">How we partner</p>
+            <p className="font-mono text-[9px] uppercase tracking-[0.26em] text-[#8cc63f]">How we partner</p>
             <h2 className="mt-5 max-w-[620px] font-[family-name:var(--font-syne)] text-[clamp(2.8rem,5.3vw,6rem)] font-medium leading-[0.9] tracking-[-0.07em]">Principles over process theatre.</h2>
-            <Link href="/contact" className="mt-8 inline-flex rounded-full border border-[#ADF531]/60 px-5 py-3 font-mono text-[9px] uppercase tracking-[0.18em] text-[#ADF531] transition duration-300 hover:bg-[#ADF531] hover:text-black">Start a project ↗</Link>
+            <Link href="/contact" className="mt-8 inline-flex rounded-full border border-[#8cc63f]/60 px-5 py-3 font-mono text-[9px] uppercase tracking-[0.18em] text-[#618d27] transition duration-300 hover:bg-[#8cc63f] hover:text-[#17181a]">Start a project ↗</Link>
           </div>
 
           <div data-reveal="up" data-reveal-stagger>

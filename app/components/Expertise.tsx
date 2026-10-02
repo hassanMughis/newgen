@@ -70,7 +70,7 @@ function StackingCard({
             {/* Top Bar: Icon + Category Badge + Card Number */}
             <div className="flex items-center justify-between gap-4 mb-6">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-sm">
+                <div className="p-2.5 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-[#e3e4e1] backdrop-blur-sm">
                   {card.icon}
                 </div>
                 <span className={`font-mono text-[9px] sm:text-[10px] lg:text-[11px] font-bold uppercase tracking-[1.6px] px-3 py-1 rounded-full ${card.badgeBg} ${card.badgeText}`}>
@@ -170,7 +170,7 @@ export default function Expertise() {
           <circle cx="12" cy="6" r="1.5" fill="currentColor" />
         </svg>
       ),
-      bgClass: 'bg-[#F2F2F2] text-black border border-white/20 shadow-[0_30px_70px_rgba(0,0,0,0.6)]',
+      bgClass: 'bg-[#ececea] text-[#17181a] border border-[#e3e4e1] shadow-[0_24px_60px_rgba(23,24,26,0.12)]',
       textColor: 'text-black',
       descColor: 'text-black/80',
       lineColor: 'border-black/15',
@@ -191,19 +191,19 @@ export default function Expertise() {
         'SEO and strategic content writing work together to increase measurable online success and brand visibility. SEO provides the technical roadmap that helps search engines like Google discover your website, while compelling content engages visitors, solves their problems, and builds trust. Combining technical optimization, targeted keyword placement, and high-value messaging drives organic traffic and turns standard visitors into loyal, paying customers.',
       deliverables: ['Technical SEO', 'Keyword Strategy', 'Content Writing', 'Conversion Copy'],
       icon: (
-        <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-6 h-6 text-[#8cc63f]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
           <path d="M8 7L3 12l5 5M16 7l5 5-5 5" />
         </svg>
       ),
-      bgClass: 'bg-[#ADF531] text-black border border-[#c4ff3e]/40 shadow-[0_35px_80px_rgba(173,245,49,0.35)]',
-      textColor: 'text-black',
-      descColor: 'text-black/85',
-      lineColor: 'border-black/15',
-      numberColor: 'text-black/45',
-      badgeBg: 'bg-black/10',
-      badgeText: 'text-black font-semibold',
-      tagBg: 'bg-black/5 border-black/15',
-      tagText: 'text-black/90',
+      bgClass: 'bg-[#17181a] text-[#f6f6f4] border border-white/10 shadow-[0_28px_70px_rgba(23,24,26,0.20)]',
+      textColor: 'text-[#f6f6f4]',
+      descColor: 'text-white/65',
+      lineColor: 'border-white/12',
+      numberColor: 'text-white/40',
+      badgeBg: 'bg-[#8cc63f]/15',
+      badgeText: 'text-[#8cc63f] font-semibold',
+      tagBg: 'bg-white/5 border-white/10',
+      tagText: 'text-white/75',
       imageSrc: '/image 4.png',
       imageAlt: 'SEO and Content Writing Abstract Shape',
       visualPosition: 'top-0 right-0 transform translate-x-[15%] -translate-y-[15%]',
@@ -217,21 +217,21 @@ export default function Expertise() {
         'Graphic design powers modern visual communication and brand identity. Through typography, color psychology, imagery, and structured layouts, it turns complex messages into scroll-stopping visuals. From memorable logos, flyers, and brochures to high-converting social creatives and website assets, impactful design shapes public perception, builds trust and authority, and persuades target audiences to engage, connect, and become loyal clients.',
       deliverables: ['Logo Identity', 'Marketing Collateral', 'Social Creatives', 'Website Visuals'],
       icon: (
-        <svg className="w-6 h-6 text-[#ADF531]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-6 h-6 text-[#8cc63f]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <ellipse cx="12" cy="12" rx="7" ry="4" transform="rotate(-30 12 12)" />
           <path d="M7 15c1 2.5 3 4 5 4s4-1.5 5-4" />
           <path d="M7 9c1-2.5 3-4 5-4s4 1.5 5 4" />
         </svg>
       ),
-      bgClass: 'bg-[#212326] text-white border border-white/10 shadow-[0_35px_80px_rgba(0,0,0,0.85)]',
-      textColor: 'text-white',
-      descColor: 'text-white/75',
-      lineColor: 'border-white/15',
-      numberColor: 'text-white/35',
-      badgeBg: 'bg-[#ADF531]/15',
-      badgeText: 'text-[#ADF531] font-semibold',
-      tagBg: 'bg-white/5 border-white/15',
-      tagText: 'text-white/85',
+      bgClass: 'bg-white text-[#17181a] border border-[#e3e4e1] shadow-[0_24px_60px_rgba(23,24,26,0.12)]',
+      textColor: 'text-[#17181a]',
+      descColor: 'text-[#6b6f76]',
+      lineColor: 'border-[#e3e4e1]',
+      numberColor: 'text-[#6b6f76]',
+      badgeBg: 'bg-[#8cc63f]/15',
+      badgeText: 'text-[#8cc63f] font-semibold',
+      tagBg: 'bg-[#f6f6f4] border-[#e3e4e1]',
+      tagText: 'text-[#6b6f76]',
       imageSrc: '/01_comp-img.webp',
       imageAlt: 'Graphic Designing Visual Asset',
     },
@@ -244,11 +244,11 @@ export default function Expertise() {
         'UX/UI web design powers every successful digital product. User Experience (UX) uses wireframing, architecture, and user psychology to create an effortless customer journey, while User Interface (UI) shapes high-end aesthetics, typography, interactive elements, and layouts. Blending research-backed functionality with modern visual appeal creates websites that are both stunning and intuitive, reducing bounce rates, boosting engagement, and maximizing sales conversions.',
       deliverables: ['UX Research', 'Wireframing', 'Interface Design', 'Interactive Prototyping'],
       icon: (
-        <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-6 h-6 text-[#8cc63f]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 3v3M12 18v3M3 12h3M18 12h3M6.3 6.3l2.2 2.2M15.5 15.5l2.2 2.2M6.3 17.7l2.2-2.2M15.5 8.5l2.2-2.2" />
         </svg>
       ),
-      bgClass: 'bg-[#F2F2F2] text-black border border-white/20 shadow-[0_30px_70px_rgba(0,0,0,0.6)]',
+      bgClass: 'bg-[#ececea] text-[#17181a] border border-[#e3e4e1] shadow-[0_24px_60px_rgba(23,24,26,0.12)]',
       textColor: 'text-black',
       descColor: 'text-black/80',
       lineColor: 'border-black/15',
@@ -274,15 +274,15 @@ export default function Expertise() {
           <path d="m17 10 4-2v8l-4-2" />
         </svg>
       ),
-      bgClass: 'bg-[#ADF531] text-black border border-[#c4ff3e]/40 shadow-[0_35px_80px_rgba(173,245,49,0.35)]',
-      textColor: 'text-black',
-      descColor: 'text-black/85',
-      lineColor: 'border-black/15',
-      numberColor: 'text-black/45',
-      badgeBg: 'bg-black/10',
-      badgeText: 'text-black font-semibold',
-      tagBg: 'bg-black/5 border-black/15',
-      tagText: 'text-black/90',
+      bgClass: 'bg-[#17181a] text-[#f6f6f4] border border-white/10 shadow-[0_28px_70px_rgba(23,24,26,0.20)]',
+      textColor: 'text-[#f6f6f4]',
+      descColor: 'text-white/65',
+      lineColor: 'border-white/12',
+      numberColor: 'text-white/40',
+      badgeBg: 'bg-[#8cc63f]/15',
+      badgeText: 'text-[#8cc63f] font-semibold',
+      tagBg: 'bg-white/5 border-white/10',
+      tagText: 'text-white/75',
       imageSrc: '/pngtree-3d-black-squiggle-png-wavy-shape-clipart-png-image_16282598 1 (1).png',
       imageAlt: 'Black 3D Squiggle for Media and Production',
     },
@@ -295,19 +295,19 @@ export default function Expertise() {
         "Website development forms the core technical architecture of your business's digital infrastructure. It transforms custom design concepts into fully functional, high-performing websites through custom coding, clean programming, secure database integration, and seamless backend development. Responsive mobile optimization, fast loading speeds, robust security, and e-commerce integration ensure your platform performs flawlessly, protects user data, and delivers an exceptional experience that powers business growth.",
       deliverables: ['Custom Development', 'Mobile Optimization', 'E-Commerce', 'Security & Performance'],
       icon: (
-        <svg className="w-6 h-6 text-[#ADF531]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-6 h-6 text-[#8cc63f]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
           <path d="M8 7 3 12l5 5M16 7l5 5-5 5M14 4l-4 16" />
         </svg>
       ),
-      bgClass: 'bg-[#212326] text-white border border-white/10 shadow-[0_35px_80px_rgba(0,0,0,0.85)]',
-      textColor: 'text-white',
-      descColor: 'text-white/75',
-      lineColor: 'border-white/15',
-      numberColor: 'text-white/35',
-      badgeBg: 'bg-[#ADF531]/15',
-      badgeText: 'text-[#ADF531] font-semibold',
-      tagBg: 'bg-white/5 border-white/15',
-      tagText: 'text-white/85',
+      bgClass: 'bg-white text-[#17181a] border border-[#e3e4e1] shadow-[0_24px_60px_rgba(23,24,26,0.12)]',
+      textColor: 'text-[#17181a]',
+      descColor: 'text-[#6b6f76]',
+      lineColor: 'border-[#e3e4e1]',
+      numberColor: 'text-[#6b6f76]',
+      badgeBg: 'bg-[#8cc63f]/15',
+      badgeText: 'text-[#8cc63f] font-semibold',
+      tagBg: 'bg-[#f6f6f4] border-[#e3e4e1]',
+      tagText: 'text-[#6b6f76]',
       imageSrc: '/3d-chrome-star-with-sharp-futuristic-design-on-transparent-background-modern-metallic-element-cut-out-png 1.png',
       imageAlt: 'Chrome Futuristic Star for Website Development',
       visualPosition: 'top-0 right-0 transform translate-x-[15%] -translate-y-[15%]',
@@ -318,12 +318,12 @@ export default function Expertise() {
     <section
       id="expertise"
       ref={containerRef}
-      className="relative bg-black text-white pt-20 pb-12 sm:pb-20 lg:pb-32 overflow-visible"
+      className="relative bg-[#ececea] text-[#17181a] pt-20 pb-12 sm:pb-20 lg:pb-32 overflow-visible"
     >
       <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10">
 
         {/* ── SECTION TITLE ── */}
-        <h2 className="font-syne font-semibold text-white text-[2.25rem] sm:text-[3.8rem] md:text-[5.8rem] lg:text-[6.5rem] tracking-tight leading-none uppercase mb-8 sm:mb-10 lg:mb-6">
+        <h2 className="font-syne font-semibold text-[#17181a] text-[2.25rem] sm:text-[3.8rem] md:text-[5.8rem] lg:text-[6.5rem] tracking-tight leading-none uppercase mb-8 sm:mb-10 lg:mb-6">
           Expertise
         </h2>
 

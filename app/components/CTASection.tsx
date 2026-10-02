@@ -4,23 +4,8 @@ import Link from 'next/link';
 
 export default function CTASection() {
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-black py-20 lg:py-28 px-4 sm:px-6 md:px-8">
-      
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-20 scale-105 pointer-events-none"
-        src="/your-video.mp4"
-      />
-
-      {/* Layered Gradient & Radial Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(173,245,49,0.09),_transparent_65%)] pointer-events-none" />
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+    <section className="relative mx-3 flex min-h-[72vh] items-center justify-center overflow-hidden rounded-[32px] bg-white px-4 py-20 shadow-[0_18px_60px_rgba(23,24,26,0.06)] sm:mx-5 sm:px-6 md:px-8 lg:mx-8 lg:rounded-[40px] lg:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(140,198,63,0.12),_transparent_38%)]" />
 
       {/* Section Content */}
       <div
@@ -30,45 +15,45 @@ export default function CTASection() {
       >
         
         {/* Category Pill with Live Pulse */}
-        <div className="mb-6 sm:mb-8 inline-flex items-center gap-2.5 rounded-full bg-[#ADF531]/10 border border-[#ADF531]/30 backdrop-blur-md px-5 py-2">
+        <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#8cc63f]/35 bg-[#8cc63f]/10 px-5 py-2 sm:mb-8">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ADF531] opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ADF531]"></span>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8cc63f] opacity-60"></span>
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#8cc63f]"></span>
           </span>
-          <span className="font-mono text-[11px] sm:text-[12px] font-bold uppercase tracking-[2px] text-[#ADF531]">
+          <span className="font-mono text-[11px] font-bold uppercase tracking-[2px] text-[#618d27] sm:text-[12px]">
             NextGen Collective
           </span>
         </div>
 
         {/* Main Headline */}
-        <h2 className=" text-white xl:leading-[1.08]  mb-4 lg:mb-3 xl:mb-6  font-semibold leading-[0.82] tracking-[-0.075em] font-syne  text-[2.3rem] sm:text-[3.2rem] lg:text-[4.55rem] xl:text-[5.8rem] 2xl:text-[6.6rem] max-w-[1200px]">
-          Where Strategy <span className="text-[#ADF531]">Meets Scalable Growth.</span>
+        <h2 className=" text-[#17181a] xl:leading-[1.08]  mb-4 lg:mb-3 xl:mb-6  font-semibold leading-[0.82] tracking-[-0.075em] font-syne  text-[2.3rem] sm:text-[3.2rem] lg:text-[4.55rem] xl:text-[5.8rem] 2xl:text-[6.6rem] max-w-[1200px]">
+          Where Strategy <span className="text-[#8cc63f]">Meets Scalable Growth.</span>
         </h2>
 
         {/* Subtitle Description */}
-        <p className="font-sans text-[#b8b8b8] text-[0.85rem] sm:text-[1.08rem] md:text-[1.18rem] leading-[1.5] max-w-4xl lg:max-w-5xl mb-11">
+        <p className="font-sans text-[#6b6f76] text-[0.85rem] sm:text-[1.08rem] md:text-[1.18rem] leading-[1.5] max-w-4xl lg:max-w-5xl mb-11">
           NextGen Digital brings ideas and execution together — empowering ambitious brands and creators to discover custom strategies, scale faster, and build high-impact digital experiences.
         </p>
 
         {/* Team Avatars & Impact Badge */}
-        <div className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-5 mb-12 bg-white/[0.03] border border-white/10 backdrop-blur-xl px-6 py-3.5 rounded-full shadow-[0_10px_35px_rgba(0,0,0,0.5)]">
+        <div className="mb-12 flex flex-col items-center gap-3.5 rounded-full border border-[#e3e4e1] bg-[#f6f6f4] px-6 py-3.5 shadow-[0_12px_35px_rgba(23,24,26,0.08)] sm:flex-row sm:gap-5">
           <div className="flex shrink-0 items-center -space-x-2.5">
             {[12, 32, 47, 60].map((id) => (
               <img
                 key={id}
                 src={`https://i.pravatar.cc/80?img=${id}`}
                 alt="NGD team member"
-                className="h-10 w-10 sm:h-11 sm:w-11 rounded-full border-2 border-[#111] object-cover"
+                className="h-10 w-10 sm:h-11 sm:w-11 rounded-full border-2 border-[#e3e4e1] object-cover"
               />
             ))}
           </div>
 
           <div className="text-center sm:text-left text-[13px] sm:text-[14px] font-medium leading-[1.35]">
-            <p className="text-white font-bold flex items-center justify-center sm:justify-start gap-1.5">
+            <p className="text-[#17181a] font-bold flex items-center justify-center sm:justify-start gap-1.5">
               Empowering Brands &amp; Creators
-              <span className="text-[#ADF531] text-xs">✦</span>
+              <span className="text-xs text-[#8cc63f]">✦</span>
             </p>
-            <p className="text-[#888]">Connecting Strategy, Design &amp; Scalable Growth</p>
+            <p className="text-[#6b6f76]">Connecting Strategy, Design &amp; Scalable Growth</p>
           </div>
         </div>
 
@@ -79,12 +64,12 @@ export default function CTASection() {
             className="
               w-full sm:w-auto
               inline-flex items-center justify-center gap-3
-              bg-[#ADF531] text-black
+              bg-[#8cc63f] text-[#1d2a0a]
               font-mono text-[12.5px] sm:text-[13.5px] font-bold tracking-[2px] uppercase
               h-[54px] sm:h-[60px] px-9 sm:px-11
               transition-all duration-300
-              hover:bg-[#c4ff3e]
-              hover:shadow-[0_0_35px_rgba(173,245,49,0.45)]
+              hover:bg-[#7eb238]
+              hover:shadow-[0_12px_30px_rgba(140,198,63,0.28)]
               hover:-translate-y-0.5
             "
           >
@@ -99,11 +84,11 @@ export default function CTASection() {
             className="
               w-full sm:w-auto
               inline-flex items-center justify-center gap-2.5
-              border border-white/20 text-white
+              border border-[#e3e4e1] text-[#17181a]
               font-mono text-[12.5px] sm:text-[13.5px] font-bold tracking-[2px] uppercase
               h-[54px] sm:h-[60px] px-9 sm:px-11
               transition-all duration-300
-              hover:border-[#ADF531] hover:text-[#ADF531] hover:bg-[#ADF531]/5
+              hover:border-[#8cc63f] hover:bg-[#8cc63f]/10 hover:text-[#618d27]
               hover:-translate-y-0.5
             "
           >

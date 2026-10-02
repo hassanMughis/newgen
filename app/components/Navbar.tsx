@@ -52,21 +52,23 @@ export default function Navbar() {
           left-0
           right-0
           mx-auto
+          min-w-0
           transition-all
           duration-700
           ease-[cubic-bezier(.4,0,.2,1)]
           ${
             scrolled
             ?
-            `top-0 max-w-full`
+            `top-0 w-full max-w-full`
             :
-            `top-3 sm:top-5 md:top-7 max-w-[92%] sm:max-w-[620px] md:max-w-[760px] lg:max-w-[880px] xl:max-w-[960px] px-3 sm:px-4`
+            `top-3 w-[calc(100%-24px)] max-w-[960px] sm:top-5 sm:w-[calc(100%-32px)] md:top-7`
           }
         `}
       >
         <header
           className={`
             flex
+            min-w-0
             items-center
             justify-between
             transition-all
@@ -87,10 +89,10 @@ export default function Navbar() {
               md:px-14
               lg:px-20
               xl:px-28
-              bg-[#050505]
-              border-[#111]
-              border-b-white/20
-              shadow-[0_12px_35px_rgba(189,254,0,0.08)]
+              bg-[#f6f6f4]
+              border-[#e3e4e1]
+              border-b-black/10
+              shadow-[0_12px_35px_rgba(23,24,26,0.08)]
               `
               :
               `
@@ -103,19 +105,19 @@ export default function Navbar() {
               sm:px-7
               md:px-9
               lg:px-12
-              bg-[rgba(5,5,5,0.92)]
-              border-[#171717]
+              bg-[rgba(246,246,244,0.88)]
+              border-[#e3e4e1]
               backdrop-blur-[14px]
-              shadow-[0_20px_45px_rgba(189,254,0,0.12)]
+              shadow-[0_20px_45px_rgba(23,24,26,0.10)]
               `
             }
           `}
         >
 
           {/* Logo */}
-          <Link href="/" className="flex items-center h-full">
+          <Link href="/" className="flex h-full min-w-0 shrink items-center">
             <img
-              src="/ngt-logo-cropped.png"
+              src="/ngt-logo-navbar.png"
               alt="NGD Logo"
               className="
                 h-[58%]
@@ -126,6 +128,7 @@ export default function Navbar() {
                 md:max-h-[46px]
                 lg:max-h-[48px]
                 w-auto
+                max-w-[190px]
                 object-contain
                 transition-all
                 duration-700
@@ -142,7 +145,7 @@ export default function Navbar() {
                   href={item.href}
                   className={`
                     relative
-                    text-[#999]
+                    text-[#6b6f76]
                     text-[11px]
                     md:text-[11.5px]
                     lg:text-[12.5px]
@@ -153,20 +156,20 @@ export default function Navbar() {
                     transition-colors
                     duration-500
                     ease-out
-                    hover:text-[#BDFE00]
+                    hover:text-[#8cc63f]
                     after:absolute
                     after:left-0
                     after:-bottom-[7px]
                     after:h-[1.5px]
                     after:w-0
-                    after:bg-[#BDFE00]
-                    after:shadow-[0_0_10px_#BDFE00]
+                    after:bg-[#8cc63f]
+                    after:shadow-[0_0_10px_#8cc63f]
                     after:transition-all
                     after:duration-500
                     after:ease-out
                     hover:after:w-full
                   
-                  ${pathname === item.href ? 'text-[#BDFE00] after:w-full' : ''}
+                  ${pathname === item.href ? 'text-[#8cc63f] after:w-full' : ''}
                   `}
                 >
                   {item.name}
@@ -186,31 +189,32 @@ export default function Navbar() {
               items-center
               gap-[5px]
               w-9 h-9
+              shrink-0
               rounded-lg
-              border border-[#222]
+              border border-[#d6d8d3]
               bg-transparent
               transition-colors duration-300
-              hover:border-[#BDFE00]/40
+              hover:border-[#8cc63f]/40
               focus:outline-none
             "
           >
             <span
               className={`
-                block w-5 h-[1.5px] bg-[#ccc]
+                block w-5 h-[1.5px] bg-[#17181a]
                 transition-all duration-300 ease-in-out origin-center
                 ${menuOpen ? 'rotate-45 translate-y-[6.5px]' : ''}
               `}
             />
             <span
               className={`
-                block w-5 h-[1.5px] bg-[#ccc]
+                block w-5 h-[1.5px] bg-[#17181a]
                 transition-all duration-300 ease-in-out
                 ${menuOpen ? 'opacity-0 scale-x-0' : ''}
               `}
             />
             <span
               className={`
-                block w-5 h-[1.5px] bg-[#ccc]
+                block w-5 h-[1.5px] bg-[#17181a]
                 transition-all duration-300 ease-in-out origin-center
                 ${menuOpen ? '-rotate-45 -translate-y-[6.5px]' : ''}
               `}
@@ -251,9 +255,9 @@ export default function Navbar() {
         <nav
           className={`
             relative
-            bg-[#080808]
-            border-b border-[#1a1a1a]
-            shadow-[0_20px_60px_rgba(0,0,0,0.8)]
+            bg-[#f6f6f4]
+            border-b border-[#e3e4e1]
+            shadow-[0_20px_60px_rgba(23,24,26,0.18)]
             flex flex-col
             px-6 pt-[85px] pb-8
             gap-1
@@ -268,15 +272,15 @@ export default function Navbar() {
               onClick={handleNavClick}
               style={{ transitionDelay: menuOpen ? `${i * 60}ms` : '0ms' }}
               className={`
-                text-[#888]
+                text-[#6b6f76]
                 text-[11px]
                 tracking-[3px]
                 uppercase
                 py-4
-                border-b border-[#111]
+                border-b border-[#e3e4e1]
                 last:border-none
                 transition-all duration-400
-                hover:text-[#BDFE00]
+                hover:text-[#8cc63f]
                 hover:pl-2
                 ${menuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-3'}
               `}

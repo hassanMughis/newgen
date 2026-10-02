@@ -24,11 +24,11 @@ export default function BrandTicker() {
             md:text-[15px]
             tracking-[3px]
             uppercase
-            text-[#BDFE00]
+            text-[#f6f6f4]
           "
         >
           {item}
-          <span className="mx-6">
+          <span className="mx-6 text-[#8cc63f]">
             ✦
           </span>
         </span>
@@ -43,9 +43,9 @@ export default function BrandTicker() {
       className="
         w-full
         overflow-hidden
-        bg-black
+        bg-[#17181a]
         border-y
-        border-[#1A1A1A]
+        border-black
         py-5
       "
     >

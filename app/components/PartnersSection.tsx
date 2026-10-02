@@ -88,7 +88,7 @@ export default function PartnersSection() {
   return (
     <section
       className="
-        bg-[#050505]
+        bg-white
         overflow-hidden
       "
     >
@@ -185,7 +185,9 @@ export default function PartnersSection() {
                 partner-logo-card
                 aspect-[6/5]
                 rounded-[20px]
-                bg-[#0D0D0D]
+                bg-[#f6f6f4]
+                border
+                border-[#e3e4e1]
                 flex
                 items-center
                 justify-center
@@ -194,7 +196,8 @@ export default function PartnersSection() {
                 group
                 transition-all
                 duration-300
-                hover:bg-[#111111]
+                hover:border-[#8cc63f]/45
+                hover:bg-[#8cc63f]/[0.06]
               "
               data-active={activeBrand === index ? "true" : "false"}
             >
@@ -204,8 +207,8 @@ export default function PartnersSection() {
                 alt={brand.name}
                 className="
                   partner-logo
-                  w-full
-                  h-full
+                  w-[72%]
+                  h-[72%]
                   object-contain
                   transition-all
                   duration-300

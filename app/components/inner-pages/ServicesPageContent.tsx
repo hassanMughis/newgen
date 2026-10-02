@@ -36,14 +36,14 @@ const services = [
 ];
 
 const toneClasses = {
-  light: 'bg-[#eeeeec] text-black',
-  lime: 'bg-[#ADF531] text-black',
-  dark: 'bg-[#171917] text-white',
+  light: 'bg-white text-[#17181a] border border-[#e3e4e1] shadow-[0_18px_55px_rgba(23,24,26,0.06)]',
+  lime: 'bg-[#17181a] text-[#f6f6f4] border border-white/10 shadow-[0_24px_70px_rgba(23,24,26,0.14)]',
+  dark: 'bg-[#ececea] text-[#17181a] border border-[#dedfdb]',
 };
 
 export default function ServicesPageContent() {
   return (
-    <section className="bg-black px-4 pb-20 text-white sm:px-6 sm:pb-28 lg:px-8 lg:pb-32 xl:px-10">
+    <section className="bg-[#f6f6f4] px-4 pb-20 text-[#17181a] sm:px-6 sm:pb-28 lg:px-8 lg:pb-32 xl:px-10">
       <div className="mx-auto max-w-[1920px] space-y-3 sm:space-y-4">
         {services.map((service, index) => (
           <article

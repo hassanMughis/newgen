@@ -42,10 +42,10 @@ export default function WorkGallery() {
   const visible = active === 'All' ? projects : projects.filter((project) => project.category === active);
 
   return (
-    <section className="bg-black px-4 pb-24 text-white sm:px-6 sm:pb-32 lg:px-8 xl:px-10">
+    <section className="bg-[#ececea] px-4 py-24 text-[#17181a] sm:px-6 sm:py-32 lg:px-8 xl:px-10">
       <div className="mx-auto max-w-[1920px]">
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-5 sm:mb-8">
-          <p className="font-mono text-[9px] uppercase tracking-[0.24em] text-white/35">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-4 border-t border-[#e3e4e1] pt-5 sm:mb-8">
+          <p className="font-mono text-[9px] uppercase tracking-[0.24em] text-[#6b6f76]">
             {String(visible.length).padStart(2, '0')} projects
           </p>
 
@@ -56,10 +56,10 @@ export default function WorkGallery() {
                 type="button"
                 onClick={() => setActive(category)}
                 aria-pressed={active === category}
-                className={`group relative pb-1 font-mono text-[9px] uppercase tracking-[0.18em] transition-colors duration-300 sm:text-[10px] ${active === category ? 'text-[#ADF531]' : 'text-white/40 hover:text-white/75'}`}
+                className={`group relative pb-1 font-mono text-[9px] uppercase tracking-[0.18em] transition-colors duration-300 sm:text-[10px] ${active === category ? 'text-[#8cc63f]' : 'text-[#6b6f76] hover:text-[#6b6f76]'}`}
               >
                 {category}
-                <span className={`absolute inset-x-0 bottom-0 h-px origin-left bg-[#ADF531] transition-transform duration-300 ${active === category ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+                <span className={`absolute inset-x-0 bottom-0 h-px origin-left bg-[#8cc63f] transition-transform duration-300 ${active === category ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
               </button>
             ))}
           </div>
@@ -69,7 +69,7 @@ export default function WorkGallery() {
           {visible.map((project, index) => (
             <article
               key={project.title}
-              className={`group relative min-w-0 overflow-hidden rounded-[13px] border border-white/[0.07] bg-[#0b0b0b] ${projectSize(index, visible.length)}`}
+              className={`group relative min-w-0 overflow-hidden rounded-[13px] border border-[#e3e4e1] bg-white ${projectSize(index, visible.length)}`}
             >
               <Image
                 src={project.image}
@@ -79,12 +79,12 @@ export default function WorkGallery() {
                 className={`${project.fit === 'contain' ? 'object-contain p-[8%]' : 'object-cover'} transition duration-700 ease-out group-hover:scale-[1.025]`}
               />
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/75 via-black/0 to-transparent opacity-70 transition duration-500 md:opacity-0 md:group-hover:opacity-100" />
-              <div className="absolute inset-x-0 bottom-0 z-20 flex items-end justify-between gap-4 p-4 transition duration-500 md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 sm:p-5 lg:p-6">
+              <div className="absolute inset-x-0 bottom-0 z-20 flex items-end justify-between gap-4 p-4 text-[#f6f6f4] transition duration-500 md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 sm:p-5 lg:p-6">
                 <div className="min-w-0">
-                  <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-[#ADF531] sm:text-[9px]">{project.category}</p>
+                  <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-[#8cc63f] sm:text-[9px]">{project.category}</p>
                   <h2 className="mt-1.5 truncate font-[family-name:var(--font-syne)] text-lg font-medium leading-none tracking-[-0.045em] sm:text-xl lg:text-2xl">{project.title}</h2>
                 </div>
-                <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#ADF531] text-base text-black">↗</span>
+                <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#8cc63f] text-base text-[#17181a]">↗</span>
               </div>
             </article>
           ))}

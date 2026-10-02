@@ -42,8 +42,8 @@ export default function Footer({ showCta = true }: FooterProps) {
     <footer
       className="
         relative
-        bg-[#050505]
-        text-white
+        bg-[#17181a]
+        text-[#f6f6f4]
         overflow-hidden
       "
     >
@@ -54,7 +54,7 @@ export default function Footer({ showCta = true }: FooterProps) {
       <section
         className="
           relative
-          min-h-[800px]
+          min-h-[620px]
           flex
           items-center
           justify-center
@@ -72,8 +72,8 @@ export default function Footer({ showCta = true }: FooterProps) {
             w-[650px]
             h-[450px]
             rounded-full
-            bg-[#0b470c]
-            opacity-50
+            bg-[#8cc63f]
+            opacity-15
             blur-[170px]
           "
         />
@@ -126,7 +126,7 @@ export default function Footer({ showCta = true }: FooterProps) {
             className="
               font-[family-name:var(--font-syne)]
               font-extrabold
-              text-white
+              text-[#f6f6f4]
               text-5xl
               sm:text-6xl
               lg:text-7xl
@@ -158,7 +158,7 @@ export default function Footer({ showCta = true }: FooterProps) {
               mt-8
               mx-auto
               max-w-[650px]
-              text-[#CAC6DD]
+              text-white/60
               text-base
               sm:text-xl
               leading-relaxed
@@ -178,7 +178,7 @@ export default function Footer({ showCta = true }: FooterProps) {
               items-center
               justify-center
               gap-2.5
-              bg-[#ADF531]
+              bg-[#8cc63f]
               text-black
               font-mono
               text-[12px]
@@ -192,8 +192,8 @@ export default function Footer({ showCta = true }: FooterProps) {
               sm:px-9
               transition-all
               duration-300
-              hover:bg-[#c4ff3e]
-              hover:shadow-[0_0_35px_rgba(173,245,49,0.45)]
+              hover:bg-[#7eb238]
+              hover:shadow-[0_0_35px_rgba(140,198,63,0.45)]
               hover:-translate-y-0.5
             "
           >
@@ -261,6 +261,9 @@ export default function Footer({ showCta = true }: FooterProps) {
                   h-12
                   w-auto
                   object-contain
+                  saturate-[0.72]
+                  brightness-0
+                  invert
                 "
               />
             </Link>
@@ -284,9 +287,9 @@ export default function Footer({ showCta = true }: FooterProps) {
                     text-xs
                     uppercase
                     tracking-[1px]
-                    text-[#CAC6DD]
+                    text-white/60
                     transition
-                    hover:text-[#ADF531]
+                    hover:text-[#8cc63f]
                   "
                 >
                   {link.name}
@@ -320,7 +323,7 @@ export default function Footer({ showCta = true }: FooterProps) {
             <p
               className="
                 text-sm
-                text-[#CAC6DD]
+                text-white/50
               "
             >
               © {new Date().getFullYear()} NextGen Digitals. All rights reserved
@@ -350,12 +353,14 @@ export default function Footer({ showCta = true }: FooterProps) {
                     h-10
                     w-10
                     rounded-full
-                    bg-[#15301E]
+                    bg-white/5
+                    border
+                    border-white/10
                     flex
                     items-center
                     justify-center
                     transition
-                    hover:bg-[#ADF531]
+                    hover:bg-[#8cc63f]
                   "
                 >
 
@@ -366,6 +371,8 @@ export default function Footer({ showCta = true }: FooterProps) {
                       w-4
                       h-4
                       object-contain
+                      brightness-0
+                      invert
                     "
                   />
 

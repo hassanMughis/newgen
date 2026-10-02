@@ -56,14 +56,14 @@ export default function WeMakeItWork() {
     }, 2000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [words.length]);
 
   const renderText = (text: string) => {
     return text.split(/(NEXT)/g).map((part: string, i: number) =>
       part === "NEXT" ? (
         <span
           key={i}
-          className="text-[#ADF531]"
+          className="text-[#8cc63f]"
         >
           {part}
         </span>
@@ -166,7 +166,7 @@ export default function WeMakeItWork() {
         className="
           relative
           z-20
-          bg-black
+          bg-[#f6f6f4]
           min-h-[24vh]
           flex
           items-center
@@ -221,7 +221,7 @@ export default function WeMakeItWork() {
         className="
           relative
           h-[240vh]
-          bg-black
+          bg-[#f6f6f4]
           -mt-[10vh]
         "
       >
@@ -265,7 +265,7 @@ export default function WeMakeItWork() {
             className="
               relative
               overflow-hidden
-              bg-[#111]
+              bg-white
               shadow-2xl
               will-change-transform
             "

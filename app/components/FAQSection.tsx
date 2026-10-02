@@ -46,8 +46,8 @@ export default function FAQSection() {
       id="faq"
       className="
         relative 
-        bg-black 
-        text-white 
+        bg-[#ececea]
+        text-[#17181a]
         py-24 
         sm:py-32 
         overflow-hidden
@@ -57,7 +57,7 @@ export default function FAQSection() {
       <div className="
         absolute 
         inset-0 
-        bg-[radial-gradient(ellipse_at_bottom,_rgba(173,245,49,0.05),_transparent_70%)] 
+        bg-[radial-gradient(ellipse_at_bottom,_rgba(140,198,63,0.05),_transparent_70%)]
         pointer-events-none
       "/>
 
@@ -90,9 +90,9 @@ export default function FAQSection() {
             sm:aspect-[16/10] 
             rounded-[24px] 
             overflow-hidden 
-            bg-[#121316] 
+            bg-white
             border 
-            border-white/10 
+            border-[#e3e4e1]
             shadow-2xl 
             group
           ">
@@ -127,9 +127,9 @@ export default function FAQSection() {
             sm:aspect-[16/10] 
             rounded-[24px] 
             overflow-hidden 
-            bg-[#121316] 
+            bg-white
             border 
-            border-white/10 
+            border-[#e3e4e1]
             shadow-2xl 
             group
           ">
@@ -186,9 +186,9 @@ export default function FAQSection() {
               items-center 
               gap-2.5 
               rounded-full 
-              bg-[#ADF531]/10 
+              bg-[#8cc63f]/10
               border 
-              border-[#ADF531]/30 
+              border-[#8cc63f]/30
               px-4 
               py-1.5
             ">
@@ -201,7 +201,7 @@ export default function FAQSection() {
                   h-full 
                   w-full 
                   rounded-full 
-                  bg-[#ADF531] 
+                  bg-[#8cc63f]
                   opacity-75
                 "/>
 
@@ -211,7 +211,7 @@ export default function FAQSection() {
                   rounded-full 
                   h-2 
                   w-2 
-                  bg-[#ADF531]
+                  bg-[#8cc63f]
                 "/>
 
               </span>
@@ -223,7 +223,7 @@ export default function FAQSection() {
                 font-bold 
                 uppercase 
                 tracking-[2px] 
-                text-[#ADF531]
+                text-[#8cc63f]
               ">
                 GOT QUESTIONS?
               </span>
@@ -234,7 +234,7 @@ export default function FAQSection() {
             <h2 className="
               font-[family-name:var(--font-syne)] 
               font-semibold
-              text-white 
+              text-[#17181a]
               text-[1.95rem] 
               sm:text-[2.4rem] 
               md:text-[3.8rem] 
@@ -252,7 +252,7 @@ export default function FAQSection() {
             <p className="
               mt-6 
               max-w-md 
-              text-white/50 
+              text-[#6b6f76]
               text-sm 
               sm:text-base 
               leading-relaxed
@@ -291,9 +291,9 @@ export default function FAQSection() {
                   ${
                   isOpen
                   ?
-                  'border-[#ADF531] bg-[#0d0f0a]'
+                  'border-[#8cc63f] bg-white'
                   :
-                  'border-[#ADF531]/55 bg-[#080a05]'
+                  'border-[#e3e4e1] bg-white'
                   }
                 `}
               >
@@ -323,7 +323,7 @@ export default function FAQSection() {
 
                     <span className="
                       font-[family-name:var(--font-syne)]
-                      text-[#ADF531]
+                      text-[#8cc63f]
                       font-black
                     ">
                       {number}
@@ -343,15 +343,15 @@ export default function FAQSection() {
                   </div>
 
 
-                  <span className="
+                  <span className={`
                     w-16 
                     flex 
                     items-center 
                     justify-center 
-                    bg-[#ADF531]
-                    text-black
                     text-3xl
-                  ">
+                    transition-colors
+                    ${isOpen ? 'bg-[#8cc63f] text-black' : 'bg-[#17181a] text-white'}
+                  `}>
                     {isOpen ? '−':'+'}
                   </span>
 
@@ -386,7 +386,7 @@ export default function FAQSection() {
   pl-[4.5rem]
   sm:pl-[5.5rem]
   max-w-[90%]
-  text-white/60
+  text-[#6b6f76]
   text-sm
   sm:text-[15px]
   leading-[1.75]

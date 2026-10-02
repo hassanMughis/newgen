@@ -8,7 +8,7 @@ export default function ImageGallery() {
   ];
 
   return (
-    <Section className="bg-black">
+    <Section className="bg-[#f6f6f4]">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {images.map((image, index) => (

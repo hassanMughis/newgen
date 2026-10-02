@@ -327,8 +327,14 @@ export default function HowWeDoIt() {
         h-auto
         min-h-0
         lg:h-[85vh]
-        bg-black
-        text-white
+        bg-[#ececea]
+        text-[#17181a]
+        mx-3
+        my-8
+        sm:mx-5
+        lg:mx-8
+        rounded-[32px]
+        lg:rounded-[40px]
         flex
         items-center
         overflow-hidden
@@ -384,12 +390,12 @@ export default function HowWeDoIt() {
                 items-center
                 gap-3
                 rounded-full
-                bg-[#ADF531]/10
+                bg-[#8cc63f]/10
                 border
-                border-[#ADF531]/30
+                border-[#8cc63f]/30
                 px-5
                 py-2
-                text-[#ADF531]
+                text-[#8cc63f]
                 font-mono
                 text-xs
                 tracking-[2px]
@@ -401,7 +407,7 @@ export default function HowWeDoIt() {
                   h-2
                   w-2
                   rounded-full
-                  bg-[#ADF531]
+                  bg-[#8cc63f]
                 "
               />
 
@@ -448,7 +454,7 @@ export default function HowWeDoIt() {
                 max-w-[380px]
                 text-lg
                 leading-relaxed
-                text-white/50
+                text-[#6b6f76]
               "
             >
 
@@ -511,9 +517,9 @@ export default function HowWeDoIt() {
                     min-h-[260px]
                     h-auto
                     rounded-[22px]
-                    bg-[#080808]
+                    bg-white
                     border
-                    border-white/10
+                    border-[#e3e4e1]
                     p-6
                     overflow-hidden
                     shrink-0
@@ -544,7 +550,7 @@ export default function HowWeDoIt() {
                       text-[110px]
                       lg:text-[180px]
                       leading-none
-                      text-white/[0.04]
+                      text-[#d5d7d2]
                     "
                   >
 
@@ -571,7 +577,7 @@ export default function HowWeDoIt() {
                         font-mono
                         text-sm
                         tracking-[3px]
-                        text-[#ADF531]
+                        text-[#8cc63f]
                       "
                     >
 
@@ -617,7 +623,7 @@ export default function HowWeDoIt() {
                       text-base
                       lg:text-lg
                       leading-relaxed
-                      text-white/50
+                      text-[#6b6f76]
                     "
                   >
 
@@ -639,7 +645,7 @@ export default function HowWeDoIt() {
                       left-0
                       h-1
                       w-full
-                      bg-[#ADF531]
+                      bg-[#8cc63f]
                       opacity-70
                     "
                   />

@@ -28,7 +28,7 @@ const rowTwo: WorkTile[] = [
 function Tile({ tile }: { tile: WorkTile }) {
   if (tile.type === 'statement') {
     return (
-      <article className="flex h-[220px] w-[290px] shrink-0 flex-col rounded-[13px] bg-[#ADF531] p-5 text-black sm:h-[280px] sm:w-[390px] sm:p-7 lg:h-[330px] lg:w-[470px]">
+      <article className="flex h-[220px] w-[290px] shrink-0 flex-col rounded-[13px] bg-[#8cc63f] p-5 text-black sm:h-[280px] sm:w-[390px] sm:p-7 lg:h-[330px] lg:w-[470px]">
         <span className="font-mono text-[9px] uppercase tracking-[0.2em]">{tile.eyebrow}</span>
         <p className="mt-auto font-[family-name:var(--font-syne)] text-3xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-4xl lg:text-5xl">{tile.text}</p>
       </article>
@@ -36,7 +36,7 @@ function Tile({ tile }: { tile: WorkTile }) {
   }
 
   return (
-    <article className="group relative h-[220px] w-[290px] shrink-0 overflow-hidden rounded-[13px] bg-[#111] sm:h-[280px] sm:w-[390px] lg:h-[330px] lg:w-[470px]">
+    <article className="group relative h-[220px] w-[290px] shrink-0 overflow-hidden rounded-[13px] bg-white sm:h-[280px] sm:w-[390px] lg:h-[330px] lg:w-[470px]">
       <Image
         src={tile.src}
         alt={tile.alt}
@@ -182,8 +182,8 @@ function WorkRow({ items, label }: { items: WorkTile[]; label: string }) {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-black to-transparent sm:w-16" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-black to-transparent sm:w-16" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-[#f6f6f4] to-transparent sm:w-16" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-[#f6f6f4] to-transparent sm:w-16" />
       <div
         ref={scrollerRef}
         role="region"
@@ -217,14 +217,14 @@ function WorkRow({ items, label }: { items: WorkTile[]; label: string }) {
 
 export default function AboutMosaic() {
   return (
-    <section className="bg-black pb-24 text-white sm:pb-32">
+    <section className="bg-[#f6f6f4] pb-24 text-[#17181a] sm:pb-32">
       <div className="mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10">
         <div data-reveal="up" className="mb-8 flex items-end justify-between gap-6">
           <div>
-            <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#ADF531]">A glimpse of the work</p>
+            <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#8cc63f]">A glimpse of the work</p>
             <h2 className="mt-3 font-[family-name:var(--font-syne)] text-3xl font-medium tracking-[-0.05em] sm:text-5xl">Ideas made visible.</h2>
           </div>
-          <p className="hidden max-w-[330px] text-xs leading-5 text-white/38 md:block">Identity, packaging, campaigns and digital experiences shaped as one connected practice.</p>
+          <p className="hidden max-w-[330px] text-xs leading-5 text-[#6b6f76] md:block">Identity, packaging, campaigns and digital experiences shaped as one connected practice.</p>
         </div>
       </div>
 

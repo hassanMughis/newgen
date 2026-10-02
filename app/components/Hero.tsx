@@ -1,14 +1,28 @@
-import ThreeAnimation from './ThreeAnimation';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-black">
+    <section className="relative min-h-[100svh] overflow-hidden bg-[#f6f6f4]">
+      <Image
+        src="/hero-home-mobile.png"
+        alt=""
+        fill
+        priority
+        sizes="(max-width: 639px) 100vw, 1px"
+        className="object-cover object-center opacity-40 sm:hidden"
+      />
+      <Image
+        src="/nextgen-light-hero.png"
+        alt=""
+        fill
+        priority
+        sizes="(min-width: 640px) 100vw, 1px"
+        className="hidden object-cover object-center sm:block"
+      />
 
-      <ThreeAnimation />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/35" />
+      {/* Soft veil keeps the centered headline readable over the studio artwork. */}
+      <div className="absolute inset-0 bg-[#f6f6f4]/45 sm:bg-white/10" />
 
 
       {/* Hero Content (Centered below navbar) */}
@@ -26,7 +40,7 @@ export default function Hero() {
         "
       >
 
-        <div className="text-center w-full px-4 sm:px-6">
+        <div className="w-full px-4 text-center sm:px-6">
 
 
           {/* Main Heading */}
@@ -36,21 +50,16 @@ export default function Hero() {
               font-black
               leading-[0.9]
               tracking-[-0.06em]
+              text-[clamp(2.35rem,10.5vw,4.5rem)]
+              sm:text-[clamp(3.5rem,8.2vw,7.5rem)]
             "
-            style={{
-              fontSize: "clamp(1.9rem, 9vw, 8rem)"
-            }}
           >
 
-            <span className="hero-glitch-line block text-[#E2E2E2]" data-text="Creativity">
-              Creativity
+            <span className="hero-glitch-line block whitespace-nowrap text-[#17181a]" data-text="Creativity Meets">
+              Creativity Meets
             </span>
 
-            <span className="hero-glitch-line block text-[#E2E2E2]" data-text="Meets">
-              Meets
-            </span>
-
-            <span className="hero-glitch-line block text-[#ADF531]" data-text="Results.">
+            <span className="hero-glitch-line block text-[#8cc63f]" data-text="Results.">
               Results.
             </span>
 
@@ -62,10 +71,10 @@ export default function Hero() {
           <p
             className="hero-support-copy
               mx-auto
-              mt-6
+              mt-5
               max-w-[750px]
               font-sans
-              text-[#A5A5A5]
+              text-[#6b6f76]
               text-sm
               sm:text-base
               md:text-lg
@@ -84,13 +93,15 @@ export default function Hero() {
           {/* Buttons */}
 <div
   className="hero-actions
-    mt-12
+    mt-8
     flex
     justify-center
     items-center
-    gap-6
+    gap-3
     flex-col
+    sm:mt-12
     sm:flex-row
+    sm:gap-6
   "
 >
 
@@ -103,16 +114,16 @@ export default function Hero() {
       justify-center
       w-[174px]
       h-[52px]
-      bg-[#BDFE00]
-      text-black
+      bg-[#17181a]
+      text-[#f6f6f4]
       font-mono
       text-[12px]
       tracking-[2px]
       uppercase
       transition-all
       duration-300
-      hover:bg-[#a9e600]
-      hover:shadow-[0_0_25px_rgba(189,254,0,0.35)]
+      hover:bg-[#2b2d30]
+      hover:shadow-[0_12px_28px_rgba(23,24,26,0.18)]
     "
   >
     Explore Work
@@ -131,16 +142,16 @@ export default function Hero() {
       h-[52px]
       bg-transparent
       border
-      border-[#252525]
-      text-[#C5C5C5]
+      border-[#8cc63f]
+      text-[#1d2a0a]
       font-mono
       text-[12px]
       tracking-[2px]
       uppercase
       transition-all
       duration-300
-      hover:border-[#BDFE00]
-      hover:text-[#BDFE00]
+      hover:border-[#7eb238]
+      hover:bg-[#8cc63f]
     "
   >
     Start Project

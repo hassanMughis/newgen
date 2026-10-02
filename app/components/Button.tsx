@@ -7,9 +7,9 @@ export default function Button({ variant = 'primary', children, className = '', 
   const baseStyles = 'px-6 py-3 rounded-lg font-medium transition-all duration-200';
   
   const variantStyles = {
-    primary: 'bg-[#ADF531] text-black hover:bg-[#9be02b]',
+    primary: 'bg-[#8cc63f] text-black hover:bg-[#7eb238]',
     secondary: 'bg-white text-black hover:bg-gray-100',
-    outline: 'border-2 border-[#ADF531] text-[#ADF531] hover:bg-[#ADF531] hover:text-black'
+    outline: 'border-2 border-[#8cc63f] text-[#8cc63f] hover:bg-[#8cc63f] hover:text-black'
   };
 
   return (

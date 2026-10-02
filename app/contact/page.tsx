@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="overflow-x-clip bg-black">
+    <main className="overflow-x-clip bg-[#f6f6f4]">
       <ContactIntro />
       <ContactDirectory />
       <ContactChannels />
