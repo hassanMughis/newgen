@@ -7,6 +7,7 @@ import Expertise from './components/Expertise';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import PartnersSection from './components/PartnersSection';
+import SelectedWorks from './components/SelectedWorks';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <CTASection />
       <HowWeDoIt />
       <Expertise />
+      <SelectedWorks />
       <PartnersSection />
       <FAQSection />
       <Footer />

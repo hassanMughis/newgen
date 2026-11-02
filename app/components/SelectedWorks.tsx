@@ -2,166 +2,83 @@
 
 import Link from 'next/link';
 
+const projects = [
+  {
+    name: 'Israr & Sons',
+    subtitle: 'Marble & Granite',
+    logo: '/IMG_1981 1.png',
+    logoClass: 'h-[62%] w-[62%]',
+  },
+  {
+    name: 'OneDrop',
+    subtitle: 'Every Drop Matters',
+    logo: '/LOGO - 0 1 1.png',
+    logoClass: 'h-[58%] w-[58%]',
+  },
+  {
+    name: 'Suraqa Enterprises',
+    subtitle: 'Pharma · Surgical · General supplies',
+    logo: '/suraqa-enterprises-logo.png',
+    logoClass: 'h-[68%] w-[68%]',
+  },
+];
+
 export default function SelectedWorks() {
   return (
-    <section id="work" className="relative bg-[#f6f6f4] text-[#17181a] py-16 sm:py-24 lg:py-28 overflow-hidden">
+    <section
+      id="work"
+      className="relative overflow-hidden bg-[#f6f6f4] py-16 text-[#17181a] sm:py-24 lg:py-28"
+    >
       <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10">
-
-        {/* ── SECTION HEADER ── */}
-        <div data-reveal="left" className="flex items-end justify-end pb-4">
+        <div data-reveal="left" className="flex items-end justify-end pb-5">
           <Link
             href="/work"
-            className="font-mono text-[11px] sm:text-[12px] font-bold text-[#8cc63f] tracking-[2px] uppercase hover:text-[#7eb238] hover:underline pb-1 transition-all"
+            className="pb-1 font-mono text-[11px] font-bold uppercase tracking-[2px] text-[#8cc63f] transition-colors hover:text-[#17181a] sm:text-[12px]"
           >
-            VIEW ALL [+]
+            View all [+]
           </Link>
         </div>
-        
-        {/* ── TOP SHOWCASE: Vertical "work" label + 3 Phone Cards ── */}
+
         <div
           data-reveal="right"
           data-reveal-stagger
-          className="flex flex-col md:flex-row items-center md:items-stretch md:justify-center gap-5 sm:gap-6 md:gap-6 lg:gap-8 mb-14 sm:mb-20"
+          className="flex flex-col gap-6 md:flex-row md:items-stretch md:justify-center lg:gap-8"
         >
-          
-          {/* Vertical "work" typography */}
           <div className="flex w-full items-center justify-start select-none md:w-auto md:justify-center">
-            <span
-              className="nextfolio-label font-syne font-semibold text-[#6b6f76] text-[2.75rem] sm:text-[3.25rem] md:text-[clamp(3.5rem,6.5vw,6.5rem)] leading-[0.78] uppercase tracking-[-0.04em]"
-            >
+            <span className="nextfolio-label font-syne text-[2.75rem] font-semibold uppercase leading-[0.78] tracking-[-0.04em] text-[#6b6f76] sm:text-[3.25rem] md:text-[clamp(3.5rem,6.5vw,6.5rem)]">
               nextfolio
             </span>
           </div>
 
-          {/* 3 Showcase Phone Cards with strict 9:16 aspect ratio */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 w-full max-w-[1380px]">
-            
-            {/* Card 1: Royal Blue Brand Card */}
-            <div data-cursor="focus" className="group relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border border-[#e3e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(23,24,26,0.10)] transition-all duration-500 hover:scale-[1.02] hover:border-[#8cc63f]/45 hover:shadow-[0_25px_60px_rgba(140,198,63,0.16)] sm:rounded-[38px] flex flex-col items-center justify-center">
-              {/* Radial gradient sheen */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.15),_transparent_65%)]" />
-              
-              {/* Center Emblem */}
-              <div className="relative z-10 flex items-center justify-center">
-                <svg className="w-16 h-16 sm:w-20 sm:h-20 text-[#17181a] drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" viewBox="0 0 48 48" fill="none">
-                  <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="3" />
-                  <circle cx="20" cy="20" r="2.5" fill="currentColor" />
-                  <circle cx="28" cy="20" r="2.5" fill="currentColor" />
-                  <circle cx="24" cy="27" r="2" fill="currentColor" />
-                  <circle cx="18" cy="26" r="1.5" fill="currentColor" />
-                  <circle cx="30" cy="26" r="1.5" fill="currentColor" />
-                </svg>
-              </div>
-            </div>
+          <div className="grid w-full max-w-[1380px] grid-cols-1 gap-6 sm:grid-cols-3 lg:gap-8">
+            {projects.map((project) => (
+              <article
+                key={project.name}
+                data-cursor="focus"
+                className="group relative flex aspect-[9/16] w-full flex-col items-center justify-center overflow-hidden rounded-[32px] border border-[#e3e4e1] bg-white p-6 text-center shadow-[0_20px_50px_rgba(23,24,26,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#8cc63f]/50 hover:shadow-[0_25px_60px_rgba(140,198,63,0.16)] sm:rounded-[38px]"
+              >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(140,198,63,0.08),_transparent_68%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-            {/* Card 2: Pastel Rose Chocolate Brownie Card */}
-            <div data-cursor="focus" className="group relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border border-[#8cc63f]/25 bg-[#eaf2df] p-6 shadow-[0_20px_50px_rgba(23,24,26,0.10)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(140,198,63,0.16)] sm:rounded-[38px] flex flex-col items-center justify-center">
-              <div className="relative z-10 flex flex-col items-center text-center">
-                {/* Center Brownie Image */}
-                <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-2xl mb-4 transition-transform duration-500 group-hover:scale-105">
+                <div className="relative z-10 flex h-[70%] w-full items-center justify-center overflow-hidden">
                   <img
-                    src="/brownie.jpg"
-                    alt="Chocolate Brownie"
-                    className="w-full h-full object-cover"
+                    src={project.logo}
+                    alt={`${project.name} logo`}
+                    className={`${project.logoClass} object-contain transition-transform duration-500 group-hover:scale-105`}
                   />
                 </div>
 
-                {/* Script Typography */}
-                <span className="font-serif italic text-black/80 font-bold text-lg sm:text-2xl tracking-wide">
-                  Chocolate &amp;
-                </span>
-                <span className="font-serif italic text-black/80 font-bold text-base sm:text-xl -mt-1 tracking-wide">
-                  Brownie
-                </span>
-              </div>
-            </div>
-
-            {/* Card 3: Glowing Dark Mint App Icon Card */}
-            <div data-cursor="focus" className="group relative aspect-[9/16] w-full overflow-hidden rounded-[32px] border border-[#e3e4e1] bg-white p-6 shadow-[0_20px_50px_rgba(23,24,26,0.10)] transition-all duration-500 hover:scale-[1.02] hover:border-[#8cc63f]/45 hover:shadow-[0_25px_60px_rgba(140,198,63,0.16)] sm:rounded-[38px] flex flex-col items-center justify-center">
-              {/* Mint ambient glow */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(95,245,190,0.18),_transparent_70%)]" />
-
-              {/* Glowing App Squircle Icon */}
-              <div className="relative z-10">
-                <div className="relative flex h-24 w-24 items-center justify-center rounded-[24px] bg-[#8cc63f] shadow-[0_0_40px_rgba(140,198,63,0.28)] sm:h-32 sm:w-32 sm:rounded-[30px]">
-                  {/* Quote / emblem graphic */}
-                  <span className="font-syne font-black text-black text-3xl sm:text-5xl select-none tracking-tight">
-                    aa
-                  </span>
-
-                  {/* Overlapping User Avatar Badge */}
-                  <div className="absolute -bottom-2.5 -right-2.5 w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-black overflow-hidden shadow-lg">
-                    <img
-                      src="https://i.pravatar.cc/80?img=33"
-                      alt="Creator"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="relative z-10 mt-3">
+                  <h3 className="font-syne text-lg font-bold uppercase tracking-[-0.02em] text-[#17181a] sm:text-xl">
+                    {project.name}
+                  </h3>
+                  <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.12em] text-[#6b6f76] sm:text-[10px]">
+                    {project.subtitle}
+                  </p>
                 </div>
-              </div>
-            </div>
-
+              </article>
+            ))}
           </div>
-
         </div>
-
-
-        {/* ── BOTTOM SHOWCASE: 2-Column Grid (PCKD + MEAT DUKAN / FUNCHI) ── */}
-        <div
-          data-reveal="up"
-          data-reveal-stagger
-          className="grid grid-cols-1 lg:grid-cols-[1.1fr_1.3fr] gap-8 sm:gap-10 lg:gap-8 xl:gap-10 items-stretch"
-        >
-          
-          {/* Left: PCKD Tall Feature Card (Height matches right column exactly) */}
-          <div data-cursor="focus" className="flex flex-col h-full group">
-            <div className="relative w-full flex-1 min-h-[460px] sm:min-h-[540px] lg:min-h-0 rounded-[28px] sm:rounded-[32px] overflow-hidden bg-white border border-[#e3e4e1] shadow-2xl transition-all duration-500 group-hover:border-[#8cc63f]/50 group-hover:shadow-[0_20px_60px_rgba(140,198,63,0.15)]">
-              <img
-                src="/pckd.jpg"
-                alt="PCKD Whey Protein"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-            <p className="font-sans font-bold uppercase tracking-wider text-[15px] sm:text-[17px] text-[#17181a] mt-4 shrink-0">
-              PCKD
-            </p>
-          </div>
-
-          {/* Right: Stacked Cards (Meat Dukan & Funchi) */}
-          <div className="flex flex-col justify-between gap-8 sm:gap-10 lg:gap-8 h-full">
-            
-            {/* Top: Meat Dukan */}
-            <div data-cursor="focus" className="flex flex-col group">
-              <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[32px] overflow-hidden bg-white border border-[#e3e4e1] shadow-2xl transition-all duration-500 group-hover:border-red-500/40 group-hover:shadow-[0_20px_60px_rgba(200,50,50,0.15)]">
-                <img
-                  src="/meat-dukan.jpg"
-                  alt="Meat Dukan"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <p className="font-sans font-bold uppercase tracking-wider text-[15px] sm:text-[17px] text-[#17181a] mt-4 shrink-0">
-                MEAT DUKAN
-              </p>
-            </div>
-
-            {/* Bottom: Funchi Storefront */}
-            <div data-cursor="focus" className="flex flex-col group">
-              <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[32px] overflow-hidden bg-white border border-[#e3e4e1] shadow-2xl transition-all duration-500 group-hover:border-yellow-500/40 group-hover:shadow-[0_20px_60px_rgba(240,180,40,0.15)]">
-                <img
-                  src="/funchi.jpg"
-                  alt="Funchi"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <p className="font-sans font-bold uppercase tracking-wider text-[15px] sm:text-[17px] text-[#17181a] mt-4 shrink-0">
-                FUNCHI
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
     </section>
   );
