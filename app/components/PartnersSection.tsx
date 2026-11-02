@@ -203,8 +203,8 @@ export default function PartnersSection() {
                 alt={brand.name}
                 className="
                   partner-logo
-                  w-[48%]
-                  h-[48%]
+                  w-[56%]
+                  h-[56%]
                   object-contain
                   transition-all
                   duration-300
