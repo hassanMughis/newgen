@@ -255,15 +255,12 @@ export default function Footer({ showCta = true }: FooterProps) {
 
             <Link href="/" aria-label="NextGen Digitals home">
               <img
-                src="/ngt-logo-cropped.png"
+                src="/ngd-logo-light.png"
                 alt="NextGen Digitals"
                 className="
                   h-12
                   w-auto
                   object-contain
-                  saturate-[0.72]
-                  brightness-0
-                  invert
                 "
               />
             </Link>

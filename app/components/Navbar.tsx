@@ -117,8 +117,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex h-full min-w-0 shrink items-center">
             <img
-              src="/ngt-logo-navbar.png"
-              alt="NGD Logo"
+              src="/ngd-logo-dark.png"
+              alt="NextGen Digitals"
               className="
                 h-[58%]
                 sm:h-[60%]
