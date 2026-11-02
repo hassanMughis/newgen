@@ -42,7 +42,7 @@ export default function SelectedWorks() {
         <div
           data-reveal="right"
           data-reveal-stagger
-          className="flex flex-col gap-6 md:flex-row md:items-stretch md:justify-center lg:gap-8"
+          className="mb-14 flex flex-col gap-6 sm:mb-20 md:flex-row md:items-stretch md:justify-center lg:gap-8"
         >
           <div className="flex w-full items-center justify-start select-none md:w-auto md:justify-center">
             <span className="nextfolio-label font-syne text-[2.75rem] font-semibold uppercase leading-[0.78] tracking-[-0.04em] text-[#6b6f76] sm:text-[3.25rem] md:text-[clamp(3.5rem,6.5vw,6.5rem)]">
@@ -77,6 +77,53 @@ export default function SelectedWorks() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+
+        <div
+          data-reveal="up"
+          data-reveal-stagger
+          className="grid grid-cols-1 items-stretch gap-8 sm:gap-10 lg:grid-cols-[1.1fr_1.3fr] lg:gap-8 xl:gap-10"
+        >
+          <div data-cursor="focus" className="group flex h-full flex-col">
+            <div className="relative min-h-[460px] w-full flex-1 overflow-hidden rounded-[28px] border border-[#e3e4e1] bg-white shadow-2xl transition-all duration-500 group-hover:border-[#8cc63f]/50 group-hover:shadow-[0_20px_60px_rgba(140,198,63,0.15)] sm:min-h-[540px] sm:rounded-[32px] lg:min-h-0">
+              <img
+                src="/pckd.jpg"
+                alt="PCKD Whey Protein"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <p className="mt-4 shrink-0 font-sans text-[15px] font-bold uppercase tracking-wider text-[#17181a] sm:text-[17px]">
+              PCKD
+            </p>
+          </div>
+
+          <div className="flex h-full flex-col justify-between gap-8 sm:gap-10 lg:gap-8">
+            <div data-cursor="focus" className="group flex flex-col">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[28px] border border-[#e3e4e1] bg-white shadow-2xl transition-all duration-500 group-hover:border-red-500/40 group-hover:shadow-[0_20px_60px_rgba(200,50,50,0.15)] sm:rounded-[32px]">
+                <img
+                  src="/meat-dukan.jpg"
+                  alt="Meat Dukan"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <p className="mt-4 shrink-0 font-sans text-[15px] font-bold uppercase tracking-wider text-[#17181a] sm:text-[17px]">
+                Meat Dukan
+              </p>
+            </div>
+
+            <div data-cursor="focus" className="group flex flex-col">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[28px] border border-[#e3e4e1] bg-white shadow-2xl transition-all duration-500 group-hover:border-yellow-500/40 group-hover:shadow-[0_20px_60px_rgba(240,180,40,0.15)] sm:rounded-[32px]">
+                <img
+                  src="/funchi.jpg"
+                  alt="Funchi"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <p className="mt-4 shrink-0 font-sans text-[15px] font-bold uppercase tracking-wider text-[#17181a] sm:text-[17px]">
+                Funchi
+              </p>
+            </div>
           </div>
         </div>
       </div>
