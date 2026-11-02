@@ -11,6 +11,8 @@ const responseTimes = [
   { label: 'Careers', time: 'Within 5 business days' },
 ];
 
+const showStudioDetails = false;
+
 export default function ContactDirectory() {
   return (
     <>
@@ -39,31 +41,33 @@ export default function ContactDirectory() {
         </div>
       </section>
 
-      <section className="bg-white px-4 py-24 text-[#17181a] sm:px-6 sm:py-32 lg:px-8 lg:py-40 xl:px-10">
-        <div className="mx-auto grid max-w-[1920px] gap-3 lg:grid-cols-[1.1fr_.9fr]">
-          <article data-reveal="left" className="relative overflow-hidden rounded-[24px] border border-[#e3e4e1] bg-white p-6 sm:p-9 lg:min-h-[420px] lg:p-12">
-            <div className="absolute -bottom-32 -right-24 size-80 rounded-full border border-[#8cc63f]/16 shadow-[0_0_90px_rgba(140,198,63,0.08)]" />
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8cc63f] sm:text-[11px]">Studio office</p>
-            <h2 className="mt-5 max-w-[680px] font-[family-name:var(--font-syne)] text-[clamp(2.5rem,4.8vw,5.4rem)] font-medium leading-[0.92] tracking-[-0.065em]">Pakistan rooted. Globally connected.</h2>
-            <div className="mt-10 grid gap-5 border-t border-[#e3e4e1] pt-5 sm:grid-cols-2 lg:mt-16">
-              <div><p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#6b6f76]">Working hours</p><p className="mt-3 text-base leading-7 text-[#6b6f76]">Monday–Friday / 10:00–18:00 PKT</p></div>
-              <div><p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#6b6f76]">Meetings</p><p className="mt-3 text-base leading-7 text-[#6b6f76]">Remote worldwide / In-person by appointment</p></div>
-            </div>
-          </article>
+      {showStudioDetails && (
+        <section className="bg-white px-4 py-24 text-[#17181a] sm:px-6 sm:py-32 lg:px-8 lg:py-40 xl:px-10">
+          <div className="mx-auto grid max-w-[1920px] gap-3 lg:grid-cols-[1.1fr_.9fr]">
+            <article data-reveal="left" className="relative overflow-hidden rounded-[24px] border border-[#e3e4e1] bg-white p-6 sm:p-9 lg:min-h-[420px] lg:p-12">
+              <div className="absolute -bottom-32 -right-24 size-80 rounded-full border border-[#8cc63f]/16 shadow-[0_0_90px_rgba(140,198,63,0.08)]" />
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#8cc63f] sm:text-[11px]">Studio office</p>
+              <h2 className="mt-5 max-w-[680px] font-[family-name:var(--font-syne)] text-[clamp(2.5rem,4.8vw,5.4rem)] font-medium leading-[0.92] tracking-[-0.065em]">Pakistan rooted. Globally connected.</h2>
+              <div className="mt-10 grid gap-5 border-t border-[#e3e4e1] pt-5 sm:grid-cols-2 lg:mt-16">
+                <div><p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#6b6f76]">Working hours</p><p className="mt-3 text-base leading-7 text-[#6b6f76]">Monday–Friday / 10:00–18:00 PKT</p></div>
+                <div><p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#6b6f76]">Meetings</p><p className="mt-3 text-base leading-7 text-[#6b6f76]">Remote worldwide / In-person by appointment</p></div>
+              </div>
+            </article>
 
-          <article data-reveal="right" className="rounded-[24px] border border-[#8cc63f] bg-[#8cc63f] p-6 text-black sm:p-9 lg:p-12">
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] opacity-50 sm:text-[11px]">Typical response</p>
-            <div className="mt-10">
-              {responseTimes.map((item) => (
-                <div key={item.label} className="flex items-center justify-between gap-5 border-t border-black/20 py-5 last:border-b">
-                  <span className="font-[family-name:var(--font-syne)] text-xl font-medium tracking-[-0.04em] sm:text-2xl">{item.label}</span>
-                  <span className="max-w-[190px] text-right font-mono text-[11px] font-semibold uppercase leading-5 tracking-[0.1em] opacity-65 sm:text-xs">{item.time}</span>
-                </div>
-              ))}
-            </div>
-          </article>
-        </div>
-      </section>
+            <article data-reveal="right" className="rounded-[24px] border border-[#8cc63f] bg-[#8cc63f] p-6 text-black sm:p-9 lg:p-12">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] opacity-50 sm:text-[11px]">Typical response</p>
+              <div className="mt-10">
+                {responseTimes.map((item) => (
+                  <div key={item.label} className="flex items-center justify-between gap-5 border-t border-black/20 py-5 last:border-b">
+                    <span className="font-[family-name:var(--font-syne)] text-xl font-medium tracking-[-0.04em] sm:text-2xl">{item.label}</span>
+                    <span className="max-w-[190px] text-right font-mono text-[11px] font-semibold uppercase leading-5 tracking-[0.1em] opacity-65 sm:text-xs">{item.time}</span>
+                  </div>
+                ))}
+              </div>
+            </article>
+          </div>
+        </section>
+      )}
     </>
   );
 }

@@ -4,7 +4,6 @@ import ServicesIntro from '../components/inner-pages/services/ServicesIntro';
 import ServicesPrinciples from '../components/inner-pages/services/ServicesPrinciples';
 import ServicesShowcase from '../components/inner-pages/services/ServicesShowcase';
 import Footer from '../components/Footer';
-import TelephoneCTA from '../components/TelephoneCTA';
 
 export const metadata: Metadata = {
   title: 'Services | NextGen Digitals',
@@ -18,7 +17,6 @@ export default function ServicesPage() {
       <ServicesPageContent />
       <ServicesShowcase />
       <ServicesPrinciples />
-      <TelephoneCTA />
       <Footer />
     </main>
   );

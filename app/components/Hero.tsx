@@ -1,30 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-[#090a0a]">
-      <Image
-        src="/hero-home-dark-mobile.png"
-        alt=""
-        fill
-        priority
-        sizes="(max-width: 639px) 100vw, 1px"
-        className="object-cover object-center sm:hidden"
-      />
-      <Image
-        src="/hero-home-dark-desktop.png"
-        alt=""
-        fill
-        priority
-        sizes="(min-width: 640px) 100vw, 1px"
-        className="hidden object-cover object-center sm:block"
-      />
-
-      {/* A restrained veil keeps the centered copy crisp over the dark artwork. */}
-      <div className="absolute inset-0 bg-black/10" />
-
-
       {/* Hero Content (Centered below navbar) */}
       <div
         className="

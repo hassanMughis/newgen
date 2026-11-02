@@ -156,6 +156,9 @@ export default function PartnersSection() {
           data-reveal-stagger
           className="
             grid
+            w-full
+            max-w-[1240px]
+            mx-auto
             grid-cols-2
             md:grid-cols-3
             xl:grid-cols-4
@@ -175,7 +178,7 @@ export default function PartnersSection() {
               onClick={() => setActiveBrand((current) => current === index ? null : index)}
               className="
                 partner-logo-card
-                aspect-[6/5]
+                aspect-[7/5]
                 rounded-[20px]
                 bg-[#f6f6f4]
                 border
@@ -183,8 +186,9 @@ export default function PartnersSection() {
                 flex
                 items-center
                 justify-center
-                p-8
-                md:p-20
+                p-7
+                sm:p-9
+                lg:p-10
                 group
                 transition-all
                 duration-300
@@ -199,8 +203,8 @@ export default function PartnersSection() {
                 alt={brand.name}
                 className="
                   partner-logo
-                  w-[72%]
-                  h-[72%]
+                  w-[48%]
+                  h-[48%]
                   object-contain
                   transition-all
                   duration-300
