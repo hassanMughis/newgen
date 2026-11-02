@@ -79,7 +79,7 @@ export default function PortalPreloader() {
           <div className="portal-preloader__orbit" />
           <div className="portal-preloader__inner-ring" />
           <Image
-            src="/ngd-logo-light.png"
+            src="/ngd-logo-dark.png"
             alt=""
             width={360}
             height={150}
