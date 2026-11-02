@@ -27,7 +27,7 @@ export default function AboutIntro() {
     >
 
       <Image
-        src="/hero-about.png"
+        src="/hero-about-orbit.png"
         alt=""
         fill
         priority

@@ -3,17 +3,17 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-[#f6f6f4]">
+    <section className="relative min-h-[100svh] overflow-hidden bg-[#090a0a]">
       <Image
-        src="/hero-home-mobile.png"
+        src="/hero-home-dark-mobile.png"
         alt=""
         fill
         priority
         sizes="(max-width: 639px) 100vw, 1px"
-        className="object-cover object-center opacity-40 sm:hidden"
+        className="object-cover object-center sm:hidden"
       />
       <Image
-        src="/nextgen-light-hero.png"
+        src="/hero-home-dark-desktop.png"
         alt=""
         fill
         priority
@@ -21,8 +21,8 @@ export default function Hero() {
         className="hidden object-cover object-center sm:block"
       />
 
-      {/* Soft veil keeps the centered headline readable over the studio artwork. */}
-      <div className="absolute inset-0 bg-[#f6f6f4]/45 sm:bg-white/10" />
+      {/* A restrained veil keeps the centered copy crisp over the dark artwork. */}
+      <div className="absolute inset-0 bg-black/10" />
 
 
       {/* Hero Content (Centered below navbar) */}
@@ -55,7 +55,7 @@ export default function Hero() {
             "
           >
 
-            <span className="hero-glitch-line block whitespace-nowrap text-[#17181a]" data-text="Creativity Meets">
+            <span className="hero-glitch-line block whitespace-nowrap text-[#f6f6f4]" data-text="Creativity Meets">
               Creativity Meets
             </span>
 
@@ -74,7 +74,7 @@ export default function Hero() {
               mt-5
               max-w-[750px]
               font-sans
-              text-[#6b6f76]
+              text-white/65
               text-sm
               sm:text-base
               md:text-lg
@@ -114,16 +114,16 @@ export default function Hero() {
       justify-center
       w-[174px]
       h-[52px]
-      bg-[#17181a]
-      text-[#f6f6f4]
+      bg-[#f6f6f4]
+      text-[#17181a]
       font-mono
       text-[12px]
       tracking-[2px]
       uppercase
       transition-all
       duration-300
-      hover:bg-[#2b2d30]
-      hover:shadow-[0_12px_28px_rgba(23,24,26,0.18)]
+      hover:bg-white
+      hover:shadow-[0_0_30px_rgba(246,246,244,0.18)]
     "
   >
     Explore Work
@@ -143,7 +143,7 @@ export default function Hero() {
       bg-transparent
       border
       border-[#8cc63f]
-      text-[#1d2a0a]
+      text-[#8cc63f]
       font-mono
       text-[12px]
       tracking-[2px]
@@ -152,6 +152,7 @@ export default function Hero() {
       duration-300
       hover:border-[#7eb238]
       hover:bg-[#8cc63f]
+      hover:text-[#090a0a]
     "
   >
     Start Project

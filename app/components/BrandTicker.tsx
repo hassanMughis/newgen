@@ -1,76 +1,46 @@
-export default function BrandTicker() {
+const brands = [
+  "Alvigha",
+  "Laktoza",
+  "Glacierdrop",
+  "Onedropwater",
+  "Fresh Meat Shop",
+  "Israr & Sons",
+  "Karachi Emerging Youth",
+  "Masjid Umar Bin Abdul Aziz",
+];
 
-  const items = [
-    "BRANDING",
-    "UI/UX",
-    "WEB DESIGN",
-    "MOTION",
-    "DIGITAL EXPERIENCES",
-    "CREATIVE DIRECTION"
-  ];
-
-
-  const ticker = (
+function TickerRow() {
+  return (
     <>
-      {items.map((item, index) => (
+      {brands.map((brand) => (
         <span
-          key={index}
-          className="
-            flex
-            items-center
-            whitespace-nowrap
-            font-mono
-            text-[14px]
-            md:text-[15px]
-            tracking-[3px]
-            uppercase
-            text-[#f6f6f4]
-          "
+          key={brand}
+          className="flex items-center whitespace-nowrap font-mono text-[14px] uppercase tracking-[3px] text-[#f6f6f4] md:text-[15px]"
         >
-          {item}
-          <span className="mx-6 text-[#8cc63f]">
-            ✦
+          {brand}
+          <span aria-hidden="true" className="mx-6 text-[#8cc63f]">
+            •
           </span>
         </span>
       ))}
     </>
   );
+}
 
-
+export default function BrandTicker() {
   return (
     <section
       data-reveal="clip"
-      className="
-        w-full
-        overflow-hidden
-        bg-[#17181a]
-        border-y
-        border-black
-        py-5
-      "
+      aria-label="Selected brands"
+      className="w-full overflow-hidden border-y border-black bg-[#17181a] py-5"
     >
-
       <div className="flex w-max animate-marquee">
-
-        {/* Repeat multiple times */}
-        <div className="flex shrink-0">
-          {ticker}
-        </div>
-
-        <div className="flex shrink-0">
-          {ticker}
-        </div>
-
-        <div className="flex shrink-0">
-          {ticker}
-        </div>
-
-        <div className="flex shrink-0">
-          {ticker}
-        </div>
-
+        {[0, 1, 2, 3].map((copy) => (
+          <div key={copy} aria-hidden={copy > 0} className="flex shrink-0">
+            <TickerRow />
+          </div>
+        ))}
       </div>
-
     </section>
   );
 }
