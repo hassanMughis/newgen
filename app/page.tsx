@@ -3,7 +3,6 @@ import BrandTicker from './components/BrandTicker';
 import AboutSection from './components/AboutSection';
 import CTASection from './components/CTASection';
 import HowWeDoIt from './components/HowWeDoIt';
-import SelectedWorks from './components/SelectedWorks';
 import Expertise from './components/Expertise';
 import Testimonials from './components/Testimonials';
 import FAQSection from './components/FAQSection';
@@ -19,7 +18,6 @@ export default function Home() {
       <AboutSection />
       <CTASection />
       <HowWeDoIt />
-      <SelectedWorks />
       <Expertise />
       <Testimonials />
       <PartnersSection />

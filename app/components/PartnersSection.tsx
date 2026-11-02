@@ -43,10 +43,6 @@ export default function PartnersSection() {
       logo: "/Muhammadi Masjid LOGO PNG 1 (1).png",
     },
     {
-      name: "Masjid Abdul Rehman Makki",
-      logo: "/Masjid Abdul Rehman Makki LOGO PNG 1 (1).png",
-    },
-    {
       name: "Partner Logo 11",
       logo: "/logo (1) 1 (1).png",
     },
@@ -77,10 +73,6 @@ export default function PartnersSection() {
     {
       name: "Partner Logo 18",
       logo: "/2022_09_08_00_28_IMG_8649 1 (1).png",
-    },
-    {
-      name: "A&S Apparel",
-      logo: "/A&S Apparel 1.png",
     },
   ];
 
