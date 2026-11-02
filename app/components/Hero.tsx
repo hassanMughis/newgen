@@ -118,19 +118,19 @@ export default function Hero() {
       justify-center
       w-[184px]
       h-[52px]
-      bg-transparent
+      bg-[#8cc63f]
       border
       border-[#8cc63f]
-      text-[#8cc63f]
+      text-[#090a0a]
       font-mono
       text-[12px]
       tracking-[2px]
       uppercase
       transition-all
       duration-300
-      hover:border-[#7eb238]
-      hover:bg-[#8cc63f]
-      hover:text-[#090a0a]
+      hover:border-[#8cc63f]
+      hover:bg-transparent
+      hover:text-[#8cc63f]
     "
   >
     Start Project
